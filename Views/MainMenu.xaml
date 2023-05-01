@@ -269,13 +269,13 @@
 
                     <Grid Margin="10,0,10,0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="35" />
                             <ColumnDefinition Width="70" />
                             <ColumnDefinition Width="70" />
                             <ColumnDefinition Width="70" />
                             <ColumnDefinition Width="70" />
                             <ColumnDefinition Width="70" />
-                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="40" />
                         </Grid.ColumnDefinitions>
 
                         <!--// Labs //-->
@@ -287,14 +287,14 @@
                             <Button.Background>
 
 
-                                <ImageBrush ImageSource="assets/img_labs.png"
+                                <ImageBrush ImageSource="D:/VLab/Views/Assets/img_labs.png"
                                             Stretch="Uniform" />
 
 
                             </Button.Background>
 
                             <Popup Width="170"
-                                   HorizontalOffset="-12"
+                                   HorizontalOffset="-65"
                                    PlacementTarget="{Binding ElementName=labs}"
                                    IsOpen="{Binding ElementName=labs, Path=IsMouseOver, Mode=OneWay}"
                                    Style="{StaticResource PopupStyle}">
@@ -308,7 +308,7 @@
 
                                     </Border>
 
-                                    <!--<Path Style="{StaticResource ArrowPath}" />-->
+                                    <Path Style="{StaticResource ArrowPath}" />
 
                                 </Grid>
 
@@ -316,32 +316,32 @@
 
                         </Button>
 
-                        <!--// Settings //-->
+                        <!--// Materials //-->
 
-                        <!--<Button Grid.Column="2"
-                                x:Name="setting"
+                        <Button Grid.Column="2"
+                                x:Name="materials"
                                 Style="{StaticResource DockBtnStyle}">
 
-                            -->
-                        <!--<Button.Background>
+                            
+                        <Button.Background>
 
-                                <ImageBrush ImageSource="Assets/img_settings.png"
+                                <ImageBrush ImageSource="D:/VLab/Views/Assets/img_materials.png"
                                             Stretch="Uniform" />
 
-                            </Button.Background>-->
-                        <!--
+                            </Button.Background>
 
-                            <Popup Width="85"
-                                   HorizontalOffset="-20"
-                                   PlacementTarget="{Binding ElementName=setting}"
-                                   IsOpen="{Binding ElementName=setting, Path=IsMouseOver, Mode=OneWay}"
+
+                            <Popup Width="170"
+                                   HorizontalOffset="-70"
+                                   PlacementTarget="{Binding ElementName=materials}"
+                                   IsOpen="{Binding ElementName=materials, Path=IsMouseOver, Mode=OneWay}"
                                    Style="{StaticResource PopupStyle}">
 
                                 <Grid>
 
                                     <Border Style="{StaticResource border}">
 
-                                        <TextBlock Text="Settings"
+                                        <TextBlock Text="Материалы и Ресурсы"
                                                    Style="{StaticResource PopupText}" />
 
                                     </Border>
@@ -354,34 +354,34 @@
 
                         </Button>
 
-                        -->
-                        <!--// Mail //-->
-                        <!--
+                        
+                        <!--// Settings //-->
+                        
 
                         <Button Grid.Column="3"
-                                x:Name="mail"
+                                x:Name="settings"
                                 Style="{StaticResource DockBtnStyle}">
 
-                            -->
-                        <!--<Button.Background>
+                            
+                        <Button.Background>
 
-                                <ImageBrush ImageSource="Assets/img_mail.png"
+                                <ImageBrush ImageSource="D:/VLab/Views/Assets/img_settings.png"
                                             Stretch="Uniform" />
 
-                            </Button.Background>-->
-                        <!--
+                            </Button.Background>
+                        
 
-                            <Popup Width="60"
-                                   HorizontalOffset="-6"
-                                   PlacementTarget="{Binding ElementName=mail}"
-                                   IsOpen="{Binding ElementName=mail, Path=IsMouseOver, Mode=OneWay}"
+                            <Popup Width="90"
+                                   HorizontalOffset="-25"
+                                   PlacementTarget="{Binding ElementName=settings}"
+                                   IsOpen="{Binding ElementName=settings, Path=IsMouseOver, Mode=OneWay}"
                                    Style="{StaticResource PopupStyle}">
 
                                 <Grid>
 
                                     <Border Style="{StaticResource border}">
 
-                                        <TextBlock Text="Mail"
+                                        <TextBlock Text="Настройки"
                                                    Style="{StaticResource PopupText}" />
 
                                     </Border>
@@ -394,34 +394,34 @@
 
                         </Button>
 
-                        -->
-                        <!--// Visual Studio //-->
-                        <!--
+                        
+                        <!--// help //-->
+                        
 
                         <Button Grid.Column="4"
-                                x:Name="vs"
+                                x:Name="help"
                                 Style="{StaticResource DockBtnStyle}">
 
-                            -->
-                        <!--<Button.Background>
+                            
+                        <Button.Background>
 
-                                <ImageBrush ImageSource="Assets/img_vs.png"
+                                <ImageBrush ImageSource="D:/VLab/Views/Assets/img_help.png"
                                             Stretch="Uniform" />
 
-                            </Button.Background>-->
-                        <!--
+                            </Button.Background>
+                        
 
-                            <Popup Width="118"
-                                   HorizontalOffset="-35"
-                                   PlacementTarget="{Binding ElementName=vs}"
-                                   IsOpen="{Binding ElementName=vs, Path=IsMouseOver, Mode=OneWay}"
+                            <Popup Width="158"
+                                   HorizontalOffset="-60"
+                                   PlacementTarget="{Binding ElementName=help}"
+                                   IsOpen="{Binding ElementName=help, Path=IsMouseOver, Mode=OneWay}"
                                    Style="{StaticResource PopupStyle}">
 
                                 <Grid>
 
                                     <Border Style="{StaticResource border}">
 
-                                        <TextBlock Text="Visual Studio"
+                                        <TextBlock Text="Помощь/Справка"
                                                    Style="{StaticResource PopupText}" />
 
                                     </Border>
@@ -434,34 +434,34 @@
 
                         </Button>
 
-                        -->
-                        <!--// Chrome //-->
-                        <!--
+                        
+                        <!--// info //-->
+                        
 
                         <Button Grid.Column="5"
-                                x:Name="chrome"
+                                x:Name="info"
                                 Style="{StaticResource DockBtnStyle}">
 
-                            -->
-                        <!--<Button.Background>
+                            
+                        <Button.Background>
 
-                                <ImageBrush ImageSource="Assets/img_chrome.png"
+                                <ImageBrush ImageSource="D:/VLab/Views/Assets/img_info.png"
                                             Stretch="Uniform" />
 
-                            </Button.Background>-->
-                        <!--
+                            </Button.Background>
+                        
 
-                            <Popup Width="85"
-                                   HorizontalOffset="-19"
-                                   PlacementTarget="{Binding ElementName=chrome}"
-                                   IsOpen="{Binding ElementName=chrome, Path=IsMouseOver, Mode=OneWay}"
+                            <Popup Width="150"
+                                   HorizontalOffset="-55"
+                                   PlacementTarget="{Binding ElementName=info}"
+                                   IsOpen="{Binding ElementName=info, Path=IsMouseOver, Mode=OneWay}"
                                    Style="{StaticResource PopupStyle}">
 
                                 <Grid>
 
                                     <Border Style="{StaticResource border}">
 
-                                        <TextBlock Text="Chrome"
+                                        <TextBlock Text="Информация"
                                                    Style="{StaticResource PopupText}" />
 
                                     </Border>
@@ -472,7 +472,7 @@
 
                             </Popup>
 
-                        </Button>-->
+                        </Button>
 
                     </Grid>
 

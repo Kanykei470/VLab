@@ -126,7 +126,7 @@
 
     <!--// Dock Bar Popup Arrow Path //-->
 
-    <!--<Style x:Key="ArrowPath"
+    <Style x:Key="ArrowPath"
            TargetType="Path">
 
         <Setter Property="HorizontalAlignment"
@@ -156,7 +156,7 @@
     </Style>
 
 
-    --><!--// User Style //--><!--
+    <!--// User Style //--><!--
 
     <Style x:Key="UserStyle"
            TargetType="Button">
