@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VLab.Views;
 
 namespace VLab
 {
@@ -27,12 +28,18 @@ namespace VLab
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            var mainMenu = new MainMenu();
+            mainMenu.Show();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void btn_exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
