@@ -39,7 +39,7 @@ namespace VLab
 
         private void btn_exit_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Application.Current.Shutdown();
         }
     }
 }

@@ -27,7 +27,7 @@ namespace VLab.Views
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            Application.Current.Shutdown();
         }
 
         private void user_Click(object sender, RoutedEventArgs e)
@@ -64,7 +64,8 @@ namespace VLab.Views
 
         private void Border_noise(object sender, MouseButtonEventArgs e)
         {
-
+            NoiseWindow noise = new NoiseWindow();
+            noise.Show();
         }
 
         private void Border_lights(object sender, MouseButtonEventArgs e)

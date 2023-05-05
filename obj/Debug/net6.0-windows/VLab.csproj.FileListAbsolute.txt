@@ -17,8 +17,6 @@ D:\VLab\obj\Debug\net6.0-windows\refint\VLab.dll
 D:\VLab\obj\Debug\net6.0-windows\VLab.pdb
 D:\VLab\obj\Debug\net6.0-windows\VLab.genruntimeconfig.cache
 D:\VLab\obj\Debug\net6.0-windows\ref\VLab.dll
-D:\VLab\obj\Debug\net6.0-windows\MainWindow.g.cs
-D:\VLab\obj\Debug\net6.0-windows\MainWindow.baml
 D:\VLab\bin\Debug\net6.0-windows\Azure.Core.dll
 D:\VLab\bin\Debug\net6.0-windows\Azure.Identity.dll
 D:\VLab\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
@@ -79,3 +77,7 @@ D:\VLab\obj\Debug\net6.0-windows\Views\Information.g.cs
 D:\VLab\obj\Debug\net6.0-windows\Views\Information.baml
 D:\VLab\obj\Debug\net6.0-windows\Views\Question.g.cs
 D:\VLab\obj\Debug\net6.0-windows\Views\Question.baml
+D:\VLab\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\VLab\obj\Debug\net6.0-windows\MainWindow.baml
+D:\VLab\obj\Debug\net6.0-windows\Views\NoiseWindow.g.cs
+D:\VLab\obj\Debug\net6.0-windows\Views\NoiseWindow.baml
