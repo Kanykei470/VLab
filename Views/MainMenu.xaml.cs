@@ -24,5 +24,62 @@ namespace VLab.Views
             InitializeComponent();
             WindowState = WindowState.Maximized;
         }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void user_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void info_Click(object sender, RoutedEventArgs e)
+        {
+            Information info = new Information();
+            info.Show();
+        }
+
+        private void help_Click(object sender, RoutedEventArgs e)
+        {
+            Question help = new Question();
+            help.Show();
+        }
+
+        private void settings_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void materials_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void labs_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Border_noise(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Border_lights(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Border_microclimat(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Border_electrisity(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security;
 
 namespace VLab.Models;
 
@@ -13,7 +14,7 @@ public partial class Student
 
     public string Emali { get; set; } = null!;
 
-    public string Password { get; set; } = null!;
+    public SecureString Password { get; set; } = null!;
 
     public virtual Group IdGroupNavigation { get; set; } = null!;
 

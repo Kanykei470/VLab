@@ -75,3 +75,7 @@ D:\VLab\obj\Debug\net6.0-windows\Views\MainMenu.g.cs
 D:\VLab\obj\Debug\net6.0-windows\Views\MainMenu.baml
 D:\VLab\obj\Debug\net6.0-windows\Views\Dock Style.baml
 D:\VLab\obj\Debug\net6.0-windows\App.baml
+D:\VLab\obj\Debug\net6.0-windows\Views\Information.g.cs
+D:\VLab\obj\Debug\net6.0-windows\Views\Information.baml
+D:\VLab\obj\Debug\net6.0-windows\Views\Question.g.cs
+D:\VLab\obj\Debug\net6.0-windows\Views\Question.baml

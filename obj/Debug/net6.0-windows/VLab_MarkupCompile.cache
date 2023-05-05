@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\VLab\App.xaml
-3661989277
+51714792498
 
-27-1030646911
+29623494276
 226-1372224958
-MainWindow.xaml;Views\Dock Style.xaml;Views\MainMenu.xaml;
+MainWindow.xaml;Views\Dock Style.xaml;Views\Information.xaml;Views\MainMenu.xaml;Views\Question.xaml;
 
 False
 

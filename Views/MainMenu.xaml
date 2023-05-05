@@ -4,12 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VLab.Views"
-        
         mc:Ignorable="d"
         Width="1366"
         Height="728"
-        
-        
         Title="MainMenu">
     <Grid>
         <Border Background="#191825"
@@ -36,7 +33,8 @@
             <Border Grid.Row="1"
                     Grid.Column="1"
                     CornerRadius="20"
-                    Margin="20,20,20,20">
+                    Margin="20,20,20,20"
+                    MouseLeftButtonDown ="Border_noise">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0.75,0"
                                          EndPoint="0,1">
@@ -82,7 +80,8 @@
             <Border Grid.Row="1"
                     Grid.Column="2"
                     CornerRadius="20"
-                    Margin="20,20,20,20">
+                    Margin="20,20,20,20"
+                    MouseLeftButtonDown ="Border_lights">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0.75,0"
                                          EndPoint="0,1">
@@ -126,7 +125,8 @@
             <Border Grid.Row="1"
                     Grid.Column="3"
                     CornerRadius="20"
-                    Margin="20,20,20,20">
+                    Margin="20,20,20,20"
+                    MouseLeftButtonDown="Border_microclimat">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0.75,0"
                                          EndPoint="0,1">
@@ -170,7 +170,8 @@
             <Border Grid.Row="1"
                     Grid.Column="4"
                     CornerRadius="20"
-                    Margin="20,20,20,20">
+                    Margin="20,20,20,20"
+                    MouseLeftButtonDown="Border_electrisity">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0.75,0"
                                          EndPoint="0,1">
@@ -282,6 +283,7 @@
 
                         <Button Grid.Column="1"
                                 x:Name="labs"
+                                Click="labs_Click"
                                 Style="{StaticResource DockBtnStyle}">
 
                             <Button.Background>
@@ -320,10 +322,11 @@
 
                         <Button Grid.Column="2"
                                 x:Name="materials"
+                                Click="materials_Click"
                                 Style="{StaticResource DockBtnStyle}">
 
-                            
-                        <Button.Background>
+
+                            <Button.Background>
 
                                 <ImageBrush ImageSource="D:/VLab/Views/Assets/img_materials.png"
                                             Stretch="Uniform" />
@@ -354,22 +357,23 @@
 
                         </Button>
 
-                        
+
                         <!--// Settings //-->
-                        
+
 
                         <Button Grid.Column="3"
                                 x:Name="settings"
+                                Click="settings_Click"
                                 Style="{StaticResource DockBtnStyle}">
 
-                            
-                        <Button.Background>
+
+                            <Button.Background>
 
                                 <ImageBrush ImageSource="D:/VLab/Views/Assets/img_settings.png"
                                             Stretch="Uniform" />
 
                             </Button.Background>
-                        
+
 
                             <Popup Width="90"
                                    HorizontalOffset="-25"
@@ -394,22 +398,23 @@
 
                         </Button>
 
-                        
+
                         <!--// help //-->
-                        
+
 
                         <Button Grid.Column="4"
                                 x:Name="help"
+                                Click="help_Click"
                                 Style="{StaticResource DockBtnStyle}">
 
-                            
-                        <Button.Background>
+
+                            <Button.Background>
 
                                 <ImageBrush ImageSource="D:/VLab/Views/Assets/img_help.png"
                                             Stretch="Uniform" />
 
                             </Button.Background>
-                        
+
 
                             <Popup Width="158"
                                    HorizontalOffset="-60"
@@ -434,22 +439,23 @@
 
                         </Button>
 
-                        
+
                         <!--// info //-->
-                        
+
 
                         <Button Grid.Column="5"
                                 x:Name="info"
+                                Click="info_Click"
                                 Style="{StaticResource DockBtnStyle}">
 
-                            
-                        <Button.Background>
+
+                            <Button.Background>
 
                                 <ImageBrush ImageSource="D:/VLab/Views/Assets/img_info.png"
                                             Stretch="Uniform" />
 
                             </Button.Background>
-                        
+
 
                             <Popup Width="150"
                                    HorizontalOffset="-55"
@@ -484,23 +490,24 @@
 
         <!--// User //-->
 
-        <!--<Grid Height="50"
+        <Grid Height="50"
               Width="50"
               HorizontalAlignment="Right"
               VerticalAlignment="Top"
               Margin="0,30,73,0">
 
             <Button x:Name="user"
-                    Style="{StaticResource UserStyle}">
+                    Click="user_Click"
+                    Style="{StaticResource UserStyle}" Margin="-49,0,59,10">
 
-                -->
-        <!--<Button.Background>
 
-                    <ImageBrush ImageSource="Assets/img_user.png"
+                <Button.Background>
+
+                    <ImageBrush ImageSource="D:/VLab/Views/Assets/img_user.png"
                                 Stretch="Uniform" />
 
-                </Button.Background>-->
-        <!--
+                </Button.Background>
+
 
                 <Popup Width="137"
                        HorizontalOffset="-93"
@@ -525,9 +532,11 @@
 
             </Button>
 
+            <Button x:Name="ExitBtn"
+                Style="{StaticResource CloseBtnStyle}"
+                Click="ExitBtn_Click" Height="35" Width="40" HorizontalAlignment="Left" Margin="9,5,0,0" />
 
-
-        </Grid>-->
+        </Grid>
 
 
     </Grid>
