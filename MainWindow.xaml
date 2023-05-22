@@ -61,6 +61,36 @@
             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Register" Storyboard.TargetProperty="(UIElement.Visibility)">
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.9000000" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Registration" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="36"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Registration" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="-5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="textBox2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="53"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="53"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="-1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="comboBox" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="comboBox" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="comboBox" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="1.316"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="comboBox" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="1.546"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="comboBox" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.9000000" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
     <Grid x:Name="grid" Width="500" Height="500" Margin="0,-7,0,-9" RenderTransformOrigin="0.5,0.5">
@@ -83,11 +113,57 @@
             <Rectangle x:Name="rectangle1" HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="7" Fill="#FFF45050" Margin="0,3,0,0"/>
             <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="49" Margin="12,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" FontSize="36" Foreground="#FFF45050" FontWeight="Bold"><Run Language="ru-ru" Text="Вход"/></TextBlock>
             <Rectangle HorizontalAlignment="Left" Height="2" Margin="44,94,0,0" Stroke="#FF656565" VerticalAlignment="Top" Width="291"/>
-            <TextBox HorizontalAlignment="Left" Height="33" Margin="40,66,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="296" FontSize="20" TextAlignment="Center" Background="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF848484"/>
+            <TextBox 
+                x:Name="UsernameTextBox"
+                HorizontalAlignment="Left" 
+                Height="33" 
+                Margin="40,66,0,0" 
+                TextWrapping="Wrap" 
+                Text="Имя" 
+                VerticalAlignment="Top" 
+                Width="296" 
+                FontSize="20" 
+                TextAlignment="Center" 
+                Background="{x:Null}" 
+                SelectionBrush="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="#FF848484"/>
             <Rectangle HorizontalAlignment="Left" Height="2" Margin="46,156,0,0" Stroke="#FF656565" VerticalAlignment="Top" Width="291"/>
-            <TextBox HorizontalAlignment="Left" Height="33" Margin="42,127,0,0" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top" Width="296" FontSize="20" TextAlignment="Center" Background="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF848484"/>
-            <Button Content="Войти" HorizontalAlignment="Left" Height="37" Margin="76,197,0,0" VerticalAlignment="Top" Width="228" Background="#FF3C486B" FontSize="20" Click="Button_Click" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold"/>
-            <TextBlock HorizontalAlignment="Left" Height="22" Margin="118,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" TextAlignment="Center" Foreground="#FF717070" FontSize="14"><Run Language="ru-ru" Text="Забыли пароль"/><Run Text="?"/></TextBlock>
+            <PasswordBox 
+                x:Name="PasswordTextBox"
+                HorizontalAlignment="Left" 
+                Height="33" 
+                Margin="42,127,0,0" 
+                VerticalAlignment="Top" 
+                Width="296" 
+                FontSize="20" 
+                Background="{x:Null}" 
+                SelectionBrush="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="#FF848484"/>
+            <Label 
+                x:Name="ErrorTextBox"
+                HorizontalAlignment="Left" 
+                Height="33" 
+                Margin="42,170,0,0" 
+                VerticalAlignment="Top" 
+                Width="296" 
+                FontSize="13" 
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="red"/>
+            <Button 
+                Content="Войти" 
+                HorizontalAlignment="Left" 
+                Height="37" Margin="76,206,0,0" 
+                VerticalAlignment="Top" 
+                Width="228" 
+                Background="#FF3C486B" 
+                FontSize="20" 
+                Click="Button_Click" 
+                BorderBrush="{x:Null}" 
+                Foreground="White" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Height="22" Margin="118,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" TextAlignment="Center" Foreground="#FF717070" FontSize="14"><Run Language="ru-ru" Text="Забыли пароль"/><Run Text="?"/></TextBlock>
 
 
 
@@ -122,10 +198,37 @@
             </Rectangle>
             <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="49" Margin="12,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" FontSize="36" Foreground="White" FontWeight="Bold" Text="Регистрация "/>
             <Rectangle x:Name="rectangle2" HorizontalAlignment="Left" Height="2" Margin="44,85,0,0" Stroke="White" VerticalAlignment="Top" Width="291"/>
-            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="33" Margin="40,58,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="296" FontSize="20" TextAlignment="Center" Background="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+            <TextBox x:Name="UserName" HorizontalAlignment="Left" Height="33" Margin="40,58,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="296" FontSize="20" TextAlignment="Center" Background="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
             <Rectangle x:Name="rectangle3" HorizontalAlignment="Left" Height="2" Margin="45,138,0,0" Stroke="White" VerticalAlignment="Top" Width="291"/>
-            <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="33" Margin="44,105,0,0" TextWrapping="Wrap" Text="Почта" VerticalAlignment="Top" Width="296" FontSize="20" TextAlignment="Center" Background="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
-            <Button x:Name="button" Content="Далее" HorizontalAlignment="Left" Height="37" Margin="76,17,0,0" VerticalAlignment="Top" Width="228" Background="White" FontSize="20" Click="Button_Click" BorderBrush="{x:Null}" Foreground="#FF3C486B" FontWeight="Bold" Grid.Row="1"/>
+            <TextBox 
+                x:Name="Email" 
+                HorizontalAlignment="Left" 
+                Height="33" 
+                Margin="44,105,0,0" 
+                TextWrapping="Wrap" 
+                Text="Почта" 
+                VerticalAlignment="Top" Width="296" FontSize="20" TextAlignment="Center" Background="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+            <Button 
+                x:Name="Registration" 
+                Content="Далее" 
+                HorizontalAlignment="Left" 
+                Height="37" Margin="76,17,0,0" 
+                VerticalAlignment="Top" 
+                Width="228" 
+                Background="White" 
+                FontSize="20" 
+                Click="Registration_Click" 
+                BorderBrush="{x:Null}" 
+                Foreground="#FF3C486B" FontWeight="Bold" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
             <Rectangle x:Name="rectangle4" HorizontalAlignment="Left" Height="2" Margin="50,192,0,0" Stroke="White" VerticalAlignment="Top" Width="291" RenderTransformOrigin="0.5,0.5">
                 <Rectangle.RenderTransform>
                     <TransformGroup>
@@ -136,14 +239,57 @@
                     </TransformGroup>
                 </Rectangle.RenderTransform>
             </Rectangle>
-            <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="33" Margin="46,163,0,0" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top" Width="296" FontSize="20" TextAlignment="Center" Background="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+            <PasswordBox 
+                x:Name="textBox2" 
+                HorizontalAlignment="Left" Height="33" 
+                Margin="46,163,0,0" 
+                VerticalAlignment="Top" 
+                Width="296" FontSize="20" 
+                Background="{x:Null}" 
+                SelectionBrush="{x:Null}" 
+                BorderBrush="{x:Null}" Foreground="White" 
+                RenderTransformOrigin="0.5,0.5">
+                <PasswordBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </PasswordBox.RenderTransform>
+            </PasswordBox>
 
 
 
 
 
         </Grid>
-        <Button x:Name="btn_exit" Content="X" HorizontalAlignment="Left" Margin="450,10,0,0" VerticalAlignment="Top" Background="#FFF45050" Width="40" BorderBrush="{x:Null}" Click="btn_exit_Click" Foreground="White"/>
+        <Button 
+            x:Name="btn_exit" 
+            Content="X" 
+            HorizontalAlignment="Left" 
+            Margin="450,10,0,0" 
+            VerticalAlignment="Top" 
+            Background="#FFF45050" Width="40" 
+            BorderBrush="{x:Null}" 
+            Click="btn_exit_Click" Foreground="White"/>
+        <ComboBox 
+            x:Name="comboBox" 
+            HorizontalAlignment="Left" 
+            Margin="124,281,0,0" 
+            VerticalAlignment="Top" 
+            Width="120" 
+            Visibility="Hidden"
+            RenderTransformOrigin="0.5,0.5">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+        </ComboBox>
 
 
 

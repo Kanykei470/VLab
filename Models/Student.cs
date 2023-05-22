@@ -12,7 +12,7 @@ public partial class Student
 
     public short IdGroup { get; set; }
 
-    public string Emali { get; set; } = null!;
+    public string Email { get; set; } = null!;
 
     public SecureString Password { get; set; } = null!;
 

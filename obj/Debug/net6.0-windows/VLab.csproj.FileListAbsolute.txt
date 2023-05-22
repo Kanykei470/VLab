@@ -81,3 +81,9 @@ D:\VLab\obj\Debug\net6.0-windows\MainWindow.g.cs
 D:\VLab\obj\Debug\net6.0-windows\MainWindow.baml
 D:\VLab\obj\Debug\net6.0-windows\Views\NoiseWindow.g.cs
 D:\VLab\obj\Debug\net6.0-windows\Views\NoiseWindow.baml
+D:\VLab\obj\Debug\net6.0-windows\Views\ResoursesWindow.g.cs
+D:\VLab\obj\Debug\net6.0-windows\Views\ResoursesWindow.baml
+D:\VLab\obj\Debug\net6.0-windows\Views\AllLabs.g.cs
+D:\VLab\obj\Debug\net6.0-windows\Views\Settings.g.cs
+D:\VLab\obj\Debug\net6.0-windows\Views\AllLabs.baml
+D:\VLab\obj\Debug\net6.0-windows\Views\Settings.baml

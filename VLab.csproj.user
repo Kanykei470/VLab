@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\AllLabs.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Information.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,9 +22,15 @@
     <Compile Update="Views\Question.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Settings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AllLabs.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Dock Style.xaml">
@@ -37,6 +46,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Question.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Settings.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

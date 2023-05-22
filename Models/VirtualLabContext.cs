@@ -390,7 +390,7 @@ public partial class VirtualLabContext : DbContext
             entity.HasKey(e => e.IdStudents);
 
             entity.Property(e => e.IdStudents).HasColumnName("id_Students");
-            entity.Property(e => e.Emali).HasMaxLength(50);
+            entity.Property(e => e.Email).HasMaxLength(50);
             entity.Property(e => e.FullName)
                 .HasMaxLength(50)
                 .HasColumnName("Full_Name");

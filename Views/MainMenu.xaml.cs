@@ -25,6 +25,7 @@ namespace VLab.Views
             WindowState = WindowState.Maximized;
         }
 
+
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -49,17 +50,20 @@ namespace VLab.Views
 
         private void settings_Click(object sender, RoutedEventArgs e)
         {
-
+            Settings settings = new Settings();
+            settings.Show();
         }
 
         private void materials_Click(object sender, RoutedEventArgs e)
         {
-
+            ResoursesWindow resourses = new ResoursesWindow();
+            resourses.Show();
         }
 
         private void labs_Click(object sender, RoutedEventArgs e)
         {
-
+            AllLabs labs = new AllLabs();
+            labs.Show();
         }
 
         private void Border_noise(object sender, MouseButtonEventArgs e)
