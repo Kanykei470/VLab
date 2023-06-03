@@ -5,17 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VLab.Views"
         mc:Ignorable="d"
-        Title="Information" 
         Width="1366"
         Height="728"
+        Title="О программе"
         >
-    <Grid Background="#ffff">
-        <Frame Name="MyFrame"></Frame>
+    <Grid Background="#191825">
 
-        <Button Content="Назад" Click="BackButton_Click"
-        Background="Aqua" Foreground="Black"
-        FontFamily="Arial" FontSize="14"/>
-       
+        <Grid Height="50"
+              Width="55"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Top"
+              Margin="0,30,1253,0">
 
+            <Button
+                                x:Name="back"
+                                Click="BackButton_Click"
+                                Style="{StaticResource DockBtnStyle}" Margin="8,5,7,5">
+                <Button.Background>
+
+                    <ImageBrush ImageSource="D:/VLab/Views/Assets/img_back.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+            </Button>
+        </Grid>
+        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Height="398" Width="1250">
+            <TextBlock Foreground="White" 
+                       Text="Виртуальной лаборатории по дисциплине БЖД для кафедры 	&quot;Промышленная безопасность и геоэкология&quot; КГТУ им. И.Раззакова" 
+                       FontWeight="Bold" 
+                       FontSize="20" 
+                       TextWrapping="Wrap"
+                       Margin="0 0 0 10"/>
+
+            <TextBlock Foreground="White" 
+                       Text="Версия: 1.0.0" 
+                       Margin="0 0 0 5"/>
+
+            <TextBlock Foreground="White" 
+                       Text="Автор: Ажиходжоева Каныкей" 
+                       Margin="0 0 0 5"/>
+
+            <TextBlock Foreground="White" 
+                       TextWrapping="Wrap"
+                       Text="Описание: Виртуальная лаборатория по БЖД (безопасность жизнедеятельности) - это инновационное программное обеспечение, созданное для обучения и экспериментирования в области безопасности жизнедеятельности. Программа предоставляет уникальную возможность студентам, преподавателям и специалистам в области безопасности получить практический опыт и развить необходимые навыки в безопасности, используя виртуальные среды и симуляции." 
+                       Margin="0 0 0 5"/>
+
+            <TextBlock Foreground="White" 
+                       TextWrapping="Wrap"
+                       Text="С помощью виртуальной лаборатории по БЖД пользователи могут проводить разнообразные учебные исследования, моделировать ситуации риска и принимать решения в условиях, максимально приближенных к реальным. Программа предлагает широкий набор виртуальных сценариев, симуляций и задач, которые позволяют исследовать различные аспекты безопасности, включая пожарную безопасность, охрану труда, экологическую безопасность и другие." 
+                       Margin="0 0 0 5"/>
+        </StackPanel>
     </Grid>
 </Window>

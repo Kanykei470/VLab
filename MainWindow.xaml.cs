@@ -45,7 +45,6 @@ namespace VLab
 
                 reader.Close();
             }
-            
         }
 
 
@@ -57,7 +56,7 @@ namespace VLab
 
             if (VerifyUserCredentials(fullname, password))
             {
-                var mainMenu = new MainMenu();
+                var mainMenu = new MainMenu(fullname);
                 mainMenu.Show();
             }
             else if (fullname=="Имя" || string.IsNullOrEmpty(password))

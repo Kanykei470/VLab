@@ -9,6 +9,52 @@
         Height="728"
         Title="NoiseWindow">
     <Grid Background="#191825">
-        
+
+        <TextBlock 
+            Text="Экспериментальная установка" 
+            FontSize="20" 
+            Foreground="White"
+            FontWeight="Bold" 
+            Margin="58,108,506,526"/>
+
+        <Canvas>
+            <!-- Добавьте элементы интерфейса для отображения экспериментальной установки -->
+            <!-- Например, рисуйте формы, кнопки, текстовые блоки и т.д. -->
+            <Button Content="Начать измерение" Click="StartMeasurement_Click" Canvas.Left="72" Canvas.Top="186" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="CurrentTextBox" Width="100" Height="30" Canvas.Left="236" Canvas.Top="182" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="VoltageGenTextBox" Width="100" Height="30" Canvas.Left="236" Canvas.Top="232" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="VoltageMeasTextBox" Width="100" Height="30" Canvas.Left="236" Canvas.Top="282" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <!-- Добавьте другие элементы интерфейса для ввода и отображения данных -->
+        </Canvas>
+
+        <Grid Height="50"
+              Width="55"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Top"
+              Margin="0,30,1253,0">
+
+            <Button
+                                x:Name="back"
+                                Click="BackButton_Click"
+                                Style="{StaticResource DockBtnStyle}" Margin="8,5,7,5">
+                <Button.Background>
+
+                    <ImageBrush ImageSource="D:/VLab/Views/Assets/img_back.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+            </Button>
+        </Grid>
+     
+        <TextBox x:Name="TextBox" Margin="662,521,10,10" />
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+
     </Grid>
 </Window>

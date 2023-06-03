@@ -35,8 +35,9 @@ namespace VLab.Views
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-
-            NavigationService.GetNavigationService(new MainMenu());
+            MainMenu menu = new MainMenu("123");
+            menu.Show();
+            this.Close();
         }
     }
 }

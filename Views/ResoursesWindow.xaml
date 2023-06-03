@@ -9,14 +9,38 @@
          Width="1366"
         Height="728">
     <Grid Background="#191825">
+
+        <Grid Height="50"
+              Width="55"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Top"
+              Margin="0,30,1253,0">
+
+            <Button
+                                x:Name="back"
+                                Click="BackButton_Click"
+                                Style="{StaticResource DockBtnStyle}" Margin="8,5,7,5">
+                <Button.Background>
+
+                    <ImageBrush ImageSource="D:/VLab/Views/Assets/img_back.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+            </Button>
+        </Grid>
         <Button
             x:Name="Upload_Btn"
             Click="Upload_Btn_Click"
             Content="Добавить" 
             Background="#9CFF2E"
             FontSize="20"
-            Margin="1166,65,61,598">
+            Margin="1166,365,61,98">
         </Button>
-            
+   
+            <!--<DataGrid x:Name="DataTable" AutoGenerateColumns="False" Height="336" />-->
+
+
+
     </Grid>
 </Window>

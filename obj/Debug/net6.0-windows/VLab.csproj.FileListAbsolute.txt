@@ -87,3 +87,5 @@ D:\VLab\obj\Debug\net6.0-windows\Views\AllLabs.g.cs
 D:\VLab\obj\Debug\net6.0-windows\Views\Settings.g.cs
 D:\VLab\obj\Debug\net6.0-windows\Views\AllLabs.baml
 D:\VLab\obj\Debug\net6.0-windows\Views\Settings.baml
+D:\VLab\bin\Debug\net6.0-windows\DocumentFormat.OpenXml.dll
+D:\VLab\bin\Debug\net6.0-windows\Microsoft.Office.Interop.Word.dll

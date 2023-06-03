@@ -24,5 +24,12 @@ namespace VLab.Views
             InitializeComponent();
             WindowState = WindowState.Maximized;
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu menu = new MainMenu("123");
+            menu.Show();
+            this.Close();
+        }
     }
 }

@@ -10,6 +10,24 @@
         Width="1366"
         Height="728">
     <Grid>
-        
+        <Grid Height="50"
+              Width="55"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Top"
+              Margin="0,30,1253,0">
+
+            <Button
+                                x:Name="back"
+                                Click="BackButton_Click"
+                                Style="{StaticResource DockBtnStyle}" Margin="8,5,7,5">
+                <Button.Background>
+
+                    <ImageBrush ImageSource="D:/VLab/Views/Assets/img_back.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+            </Button>
+        </Grid>
     </Grid>
 </Window>

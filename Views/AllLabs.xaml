@@ -10,6 +10,381 @@
         Height="728"
         Background="#191825">
     <Grid>
-        
+        <Border Background="#191825"
+            />
+        <Grid Height="50"
+              Width="55"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Top"
+              Margin="0,30,1253,0">
+
+            <Button
+                                x:Name="back"
+                                Click="BackButton_Click"
+                                Style="{StaticResource DockBtnStyle}" Margin="8,5,7,5">
+                <Button.Background>
+
+                    <ImageBrush ImageSource="D:/VLab/Views/Assets/img_back.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+            </Button>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="270"/>
+                <ColumnDefinition Width="270"/>
+                <ColumnDefinition Width="270"/>
+                <ColumnDefinition Width="270"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="110"/>
+                <RowDefinition Height="260"/>
+                <RowDefinition Height="260"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <!--Panel1-->
+            <Border Grid.Row="1"
+                    Grid.Column="1"
+                    CornerRadius="20"
+                    Margin="20,20,20,20">
+                <!--MouseLeftButtonDown ="Border_noise"-->
+                    
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.75,0"
+                                         EndPoint="0,1">
+
+                        <GradientStop Color="#FFF45050"
+                                      Offset="0.1"/>
+                        <GradientStop Color="#F9D949"
+                                      Offset="0.8"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Grid>
+                    <Border Background="#ffff"
+                            Height="157"
+                            Width="198"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            CornerRadius="20"
+                            Opacity="0.3"
+                            Margin="10,10,0,0"
+                            />
+
+                    <TextBlock Text="ИССЛЕДОВАНИЕ ПРОИЗВОДСТВЕННОГО ШУМА"
+                               FontWeight="Bold"
+                               Foreground="#ffffff"
+                               TextWrapping="Wrap"
+                               FontSize="16"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Margin="15,28,0,0" Width="193"
+                               >
+
+                    </TextBlock>
+                </Grid>
+
+
+            </Border>
+
+
+
+
+
+            <!--Panel 2-->
+            <Border Grid.Row="1"
+                    Grid.Column="2"
+                    CornerRadius="20"
+                    Margin="20,20,20,20">
+                <!--MouseLeftButtonDown ="Border_lights"-->
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.75,0"
+                                         EndPoint="0,1">
+
+                        <GradientStop Color="#548CFF"
+                                      Offset="0.1"/>
+                        <GradientStop Color="#82CD47"
+                                      Offset="0.8"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Grid>
+                    <Border Background="#ffff"
+                            Height="153"
+                            Width="198"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            CornerRadius="20"
+                            Opacity="0.3"
+                            Margin="10,10,0,0"
+                            />
+
+                    <TextBlock Text="ЕСТЕСТВЕННОЕ ОСВЕЩЕНИЕ"
+                               FontWeight="Bold"
+                               TextWrapping="Wrap"
+                               Foreground="#ffffff"
+                               FontSize="16"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Margin="15,28,0,0" Width="193"
+                               >
+
+                    </TextBlock>
+                </Grid>
+
+
+            </Border>
+
+
+
+            <!--Panel 3-->
+            <Border Grid.Row="1"
+                    Grid.Column="3"
+                    CornerRadius="20"
+                    Margin="20,20,20,20">
+                <!--MouseLeftButtonDown="Border_microclimat"-->
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.75,0"
+                                         EndPoint="0,1">
+
+                        <GradientStop Color="#f5c05a"
+                                      Offset="0.1"/>
+                        <GradientStop Color="#b965e4"
+                                      Offset="0.8"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Grid>
+                    <Border Background="#ffff"
+                            Height="156"
+                            Width="198"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            CornerRadius="20"
+                            Opacity="0.3"
+                            Margin="10,10,0,0"
+                            />
+
+                    <TextBlock Text="МИКРОКЛИМАТ"
+                               FontWeight="Bold"
+                               TextWrapping="Wrap"
+                               Foreground="#ffffff"
+                               FontSize="16"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Margin="15,28,0,0" Width="193"
+                               >
+
+                    </TextBlock>
+                </Grid>
+
+
+            </Border>
+
+
+
+            <!--Panel 4-->
+            <Border Grid.Row="1"
+                    Grid.Column="4"
+                    CornerRadius="20"
+                    Margin="20,20,20,20">
+                <!--MouseLeftButtonDown="Border_electrisity"-->
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.75,0"
+                                         EndPoint="0,1">
+
+                        <GradientStop Color="#12c2e9"
+                                      Offset="0.1"/>
+                        <GradientStop Color="#f64f59"
+                                      Offset="0.8"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Grid>
+                    <Border Background="#ffff"
+                            Height="152"
+                            Width="198"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            CornerRadius="20"
+                            Opacity="0.3"
+                            Margin="10,10,0,0"
+                            />
+
+                    <TextBlock Text="ЭЛЕКТРИЧЕСКИЙ ТОК"
+                               TextWrapping="Wrap"
+                               Foreground="#ffffff"
+                               FontSize="16"
+                               FontWeight="Bold"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Margin="15,28,0,0" Width="193"
+                               >
+
+                    </TextBlock>
+                </Grid>
+
+
+            </Border>
+
+            <!--Panel5-->
+            <Border Grid.Row="2"
+                    Grid.Column="1"
+                    CornerRadius="20"
+                    Margin="20,20,20,20">
+                    <!--MouseLeftButtonDown ="Border_noise"-->
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.75,0"
+                                         EndPoint="0,1">
+
+                        <GradientStop Color="#C32BAD"
+                                      Offset="0.1"/>
+                        <GradientStop Color="#1DB9C3"
+                                      Offset="0.8"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Grid>
+                    <Border Background="#ffff"
+                            Height="157"
+                            Width="198"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            CornerRadius="20"
+                            Opacity="0.3"
+                            Margin="10,10,0,0"
+                            />
+
+                    <TextBlock Text="ИССЛЕДОВАНИЕ КОНЦЕНТРАЦИЙ ВРЕДНЫХ ГАЗОВ И ПАРОВ"
+                               FontWeight="Bold"
+                               TextWrapping="Wrap"
+                               Foreground="#ffffff"
+                               FontSize="16"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Margin="15,28,0,0" Width="193"
+                               >
+
+                    </TextBlock>
+                </Grid>
+            </Border>
+
+            <!--Panel6-->
+            <Border Grid.Row="2"
+                    Grid.Column="2"
+                    CornerRadius="20"
+                    Margin="20,20,20,20">
+                    <!--MouseLeftButtonDown ="Border_noise">-->
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.75,0"
+                                         EndPoint="0,1">
+
+                        <GradientStop Color="#EFA8E4"
+                                      Offset="0.1"/>
+                        <GradientStop Color="#F9D949"
+                                      Offset="0.8"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Grid>
+                    <Border Background="#ffff"
+                            Height="157"
+                            Width="198"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            CornerRadius="20"
+                            Opacity="0.3"
+                            Margin="10,10,0,0"
+                            />
+
+                    <TextBlock Text="ИССЛЕДОВАНИЕ ЗАПЫЛЕННОСТИ ВОЗДУХА"
+                               TextWrapping="Wrap"
+                               FontWeight="Bold"
+                               Foreground="#ffffff"
+                               FontSize="16"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Margin="15,28,0,0" Width="193"
+                               >
+
+                    </TextBlock>
+                </Grid>
+
+
+            </Border>
+
+
+            <TextBlock Grid.Row="0"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="4"
+                       Text="СПИСОК ДОСТУПНЫХ ВИРТУАЛЬНЫХ ЛАБОРАТОРИЙ"
+                       Foreground="#CDD7E0"
+                       FontFamily="Oswald"
+                       FontSize="36"
+                       Margin="20,50,108,0" />
+
+            <TextBlock Grid.Row="0"
+                       Grid.Column="2"
+                       Text=""
+                       Foreground="#A6B8C8"
+                       FontFamily="Roboto"
+                       FontSize="12"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Bottom"
+                       Margin="0,0,238,23" Height="14" Width="0" />
+
+
+            <!--// Footer //-->
+            <Border Grid.Row="4"
+                    Grid.ColumnSpan="6" Margin="0,0,0,0"
+                    >
+
+                <Border.Background>
+
+                    <LinearGradientBrush StartPoint="0.75,0"
+                                         EndPoint="0,1">
+
+                        <GradientStop Color="#F8F988"
+                                      Offset="0.1" />
+
+                        <GradientStop Color="#D09CFA"
+                                      Offset="0.5" />
+
+                    </LinearGradientBrush>
+
+                </Border.Background>
+
+            </Border>
+
+
+
+        </Grid>
+
+
+        <Grid Height="50"
+              Width="50"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Top"
+              Margin="0,30,73,0">
+
+            <Button x:Name="ExitBtn"
+                Style="{StaticResource CloseBtnStyle}"
+                Click="ExitBtn_Click" 
+                    Height="35" 
+                    Width="40" 
+                    HorizontalAlignment="Left" 
+                    Margin="9,5,0,0" />
+
+        </Grid>
+
+
     </Grid>
 </Window>
