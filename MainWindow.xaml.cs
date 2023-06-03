@@ -31,7 +31,7 @@ namespace VLab
             InitializeComponent();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                connection.Open();
+                connection.Open();  
 
                 string query = "SELECT Name FROM [Group]";
                 SqlCommand command = new SqlCommand(query, connection);
@@ -58,6 +58,7 @@ namespace VLab
             {
                 var mainMenu = new MainMenu(fullname);
                 mainMenu.Show();
+                Close();
             }
             else if (fullname=="Имя" || string.IsNullOrEmpty(password))
             {

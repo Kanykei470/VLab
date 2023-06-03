@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Width="1366"
         Height="728"
+        Icon="\Images\icon.ico"
         Title="О программе"
         >
     <Grid Background="#191825">
@@ -30,32 +31,63 @@
 
             </Button>
         </Grid>
-        
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Height="398" Width="1250">
-            <TextBlock Foreground="White" 
-                       Text="Виртуальной лаборатории по дисциплине БЖД для кафедры 	&quot;Промышленная безопасность и геоэкология&quot; КГТУ им. И.Раззакова" 
+
+        <TextBlock Foreground="White" 
+                       Text="Виртуальная лаборатория по дисциплине БЖД для кафедры&#x0a;&quot;Промышленная безопасность и геоэкология&quot; КГТУ им. И.Раззакова" 
                        FontWeight="Bold" 
-                       FontSize="20" 
+                       FontSize="30" 
+                       TextAlignment="Center"
                        TextWrapping="Wrap"
-                       Margin="0 0 0 10"/>
+                       HorizontalAlignment="Center"
+                       Margin="0,30,0,581" Width="1074"/>
+
+        <StackPanel 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top"
+            Height="470" Width="1250" Margin="0,125,0,0">
+
 
             <TextBlock Foreground="White" 
+                       FontSize="18"
+                       TextAlignment="Justify"
                        Text="Версия: 1.0.0" 
-                       Margin="0 0 0 5"/>
+                       Margin="0 0 0 20"/>
 
             <TextBlock Foreground="White" 
+                       TextAlignment="Justify"
+                       FontSize="18"
                        Text="Автор: Ажиходжоева Каныкей" 
-                       Margin="0 0 0 5"/>
+                       Margin="0 0 0 20"/>
 
             <TextBlock Foreground="White" 
+                       TextAlignment="Justify"
+                       FontSize="18"
                        TextWrapping="Wrap"
                        Text="Описание: Виртуальная лаборатория по БЖД (безопасность жизнедеятельности) - это инновационное программное обеспечение, созданное для обучения и экспериментирования в области безопасности жизнедеятельности. Программа предоставляет уникальную возможность студентам, преподавателям и специалистам в области безопасности получить практический опыт и развить необходимые навыки в безопасности, используя виртуальные среды и симуляции." 
-                       Margin="0 0 0 5"/>
+                       Margin="0 0 0 20"/>
 
             <TextBlock Foreground="White" 
+                       TextAlignment="Justify"
+                       FontSize="18"
                        TextWrapping="Wrap"
                        Text="С помощью виртуальной лаборатории по БЖД пользователи могут проводить разнообразные учебные исследования, моделировать ситуации риска и принимать решения в условиях, максимально приближенных к реальным. Программа предлагает широкий набор виртуальных сценариев, симуляций и задач, которые позволяют исследовать различные аспекты безопасности, включая пожарную безопасность, охрану труда, экологическую безопасность и другие." 
-                       Margin="0 0 0 5"/>
+                       Margin="0 0 0 20"/>
+
+            <TextBlock Foreground="White" 
+                       TextAlignment="Justify"
+                       FontSize="18"
+                       TextWrapping="Wrap"
+                       Text="Кафедра &quot;Промышленная безопасность и геоэкология&quot; КГТУ им. И.Раззакова занимается обучением студентов в области безопасности технологических процессов, а также охраны окружающей среды в промышленности. На кафедре проводятся курсы по профилактике аварий и чрезвычайных ситуаций, обеспечению пожарной безопасности, технике безопасности на производстве, а также охране окружающей среды и экологическому менеджменту.Кафедра также занимается научной деятельностью в области исследования и разработки методов и технологий по предотвращению чрезвычайных ситуаций и снижению воздействия промышленности на окружающую среду." 
+                       Margin="0 0 0 20"/>
+
         </StackPanel>
+
+        <Button Click="OpenWebsite" Margin="1239,29,50,603">
+            <Image Source="\Image1.png"
+                    Focusable="True" 
+                   Stretch="Fill" 
+/>
+        </Button>
+
     </Grid>
 </Window>

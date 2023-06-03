@@ -8,6 +8,7 @@
         Title="AllLabs"         
         Width="1366"
         Height="728"
+        Icon="\Images\icon.ico"
         Background="#191825">
     <Grid>
         <Border Background="#191825"
@@ -344,7 +345,7 @@
 
             <!--// Footer //-->
             <Border Grid.Row="4"
-                    Grid.ColumnSpan="6" Margin="0,0,0,0"
+                    Grid.ColumnSpan="6" Margin="0,24,0,-42"
                     >
 
                 <Border.Background>

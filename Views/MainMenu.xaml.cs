@@ -47,36 +47,43 @@ namespace VLab.Views
         {
             Information info = new Information();
             info.Show();
+            Close();
         }
 
         private void help_Click(object sender, RoutedEventArgs e)
         {
             Question help = new Question();
             help.Show();
+            Close();
+
         }
 
         private void settings_Click(object sender, RoutedEventArgs e)
         {
             Settings settings = new Settings();
             settings.Show();
+            Close();
         }
 
         private void materials_Click(object sender, RoutedEventArgs e)
         {
             ResoursesWindow resourses = new ResoursesWindow();
             resourses.Show();
+            Close();
         }
 
         private void labs_Click(object sender, RoutedEventArgs e)
         {
             AllLabs labs = new AllLabs();
             labs.Show();
+            Close();
         }
 
         private void Border_noise(object sender, MouseButtonEventArgs e)
         {
             NoiseWindow noise = new NoiseWindow();
             noise.Show();
+            Close();
         }
 
         private void Border_lights(object sender, MouseButtonEventArgs e)

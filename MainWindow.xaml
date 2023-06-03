@@ -8,6 +8,7 @@
         Title="Login" Height="500" Width="500"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
+        Icon="Images\icon.ico"
         Background="{x:Null}" WindowStyle="None" AllowsTransparency="True">
     <Window.Resources>
         <Storyboard x:Key="Storyboard1">

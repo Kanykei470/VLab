@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Width="1366"
         Height="728"
+        Icon="\Images\icon.ico"
         Title="MainMenu">
     <Grid>
         <Border Background="#191825"

@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:VLab.Views"
         mc:Ignorable="d"
         Title="Settings" 
+        Icon="\Images\icon.ico"
         Background="#191825"
         Width="1366"
         Height="728">

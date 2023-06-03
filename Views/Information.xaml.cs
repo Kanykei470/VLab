@@ -39,5 +39,23 @@ namespace VLab.Views
             menu.Show();
             this.Close();
         }
+
+        private void OpenWebsite(object sender, RoutedEventArgs e)
+        {
+            string url = "https://kstu.kg"; // Замените на URL вашего веб-сайта
+
+            try
+            {
+                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

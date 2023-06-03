@@ -8,6 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="icon.ico" />
+    <None Remove="Image1.png" />
+    <None Remove="Images\icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image1.png" />
+    <Resource Include="Images\icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Assets\" />
     <Folder Include="Resourses\" />
@@ -26,6 +37,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1004" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icon.ico" />
   </ItemGroup>
 
 </Project>
