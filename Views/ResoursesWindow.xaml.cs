@@ -1,22 +1,11 @@
-﻿using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Wordprocessing;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+using System.Data.SqlClient;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using Microsoft.Office.Interop.Word;
-using Application = Microsoft.Office.Interop.Word.Application;
-using Table = Microsoft.Office.Interop.Word.Table;
+using VLab.Models;
+using System.Data;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace VLab.Views
 {
@@ -25,10 +14,38 @@ namespace VLab.Views
     /// </summary>
     public partial class ResoursesWindow : System.Windows.Window
     {
+        public string connectionString = "Server=DROPSOFJUPITER;Database=VirtualLab;Trusted_Connection=True;TrustServerCertificate=True;";
         public ResoursesWindow()
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
+           
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Откройте соединение
+                connection.Open();
+
+                // Выполните SQL-запрос
+                string sqlQuery = "SELECT * FROM ViewOfMaterials";
+                SqlCommand command = new SqlCommand(sqlQuery, connection);
+
+                // Создайте объект SqlDataAdapter для извлечения данных из базы данных
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                // Создайте объект DataTable для хранения результирующих данных
+                System.Data.DataTable dataTable = new System.Data.DataTable();
+
+                // Заполните DataTable данными из базы данных
+                adapter.Fill(dataTable);
+
+                // Назначьте DataTable свойству ItemsSource вашего DataGrid
+                DataGrid.ItemsSource = dataTable.DefaultView;
+
+                // Закройте соединение
+                connection.Close();
+            }
+            DataGrid.MouseDoubleClick += DataGrid_MouseDoubleClick;
+
         }
 
         private void Upload_Btn_Click(object sender, RoutedEventArgs e)
@@ -52,44 +69,7 @@ namespace VLab.Views
         }
 
 
-        private void LoadWordFile(string filePath)
-        {
-            //DataTable.Columns.Clear();
-            //DataTable.Items.Clear();
-
-            //Application wordApplication = new Application();
-            //Microsoft.Office.Interop.Word.Document wordDocument = wordApplication.Documents.Open(filePath);
-
-            //foreach (Table table in wordDocument.Tables)
-            //{
-            //    System.Windows.Documents.TableRow headerRow = (System.Windows.Documents.TableRow)table.Rows[1];
-            //    if (headerRow != null)
-            //    {
-            //        foreach (Microsoft.Office.Interop.Word.Cell cell in headerRow.Cells)
-            //        {
-            //            string headerText = cell.Range.Text.Trim();
-            //            DataTable.Columns.Add(new DataGridTextColumn { Header = headerText });
-            //        }
-            //    }
-
-            //    for (int i = 2; i <= table.Rows.Count; i++)
-            //    {
-            //        System.Windows.Documents.TableRow row = (System.Windows.Documents.TableRow)table.Rows[i];
-            //        List<string> rowData = new List<string>();
-
-            //        foreach (Microsoft.Office.Interop.Word.Cell cell in row.Cells)
-            //        {
-            //            string cellText = cell.Range.Text.Trim();
-            //            rowData.Add(cellText);
-            //        }
-
-            //        DataTable.Items.Add(rowData);
-            //    }
-            //}
-
-            //wordDocument.Close();
-            //wordApplication.Quit();
-        }
+       
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
@@ -97,5 +77,38 @@ namespace VLab.Views
             menu.Show();
             this.Close();
         }
+
+        private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            // Получить выбранную строку
+            DataRowView selectedRow = (DataRowView)DataGrid.SelectedItem;
+
+            // Проверить, что строка не является null
+            if (selectedRow != null)
+            {
+               string filePath = selectedRow.Row["Material"].ToString();
+                // Открыть файл в Microsoft Word
+                LoadWordFile("D:\\VLab\\Resourses\\" + filePath);
+            }
+        }
+
+        private void LoadWordFile(string filePath)
+        {
+            try
+            {
+                using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(filePath, false))
+                {
+                    Body body = wordDoc.MainDocumentPart.Document.Body;
+                    string content = body.InnerText;
+                    TextBox.Text = content;
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Ошибка загрузки файла: " + ex.Message);
+            }
+        }
+
+
     }
 }

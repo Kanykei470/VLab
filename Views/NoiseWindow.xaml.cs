@@ -102,5 +102,10 @@ namespace VLab.Views
 
             // Добавьте код для сохранения результатов в протокол наблюдений
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

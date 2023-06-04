@@ -8,7 +8,7 @@
         Width="1366"
         Height="728"
         Icon="\Images\icon.ico"
-        Title="NoiseWindow">
+        Title="Окно выполнения Лабораторной Работы">
     <Grid Background="#191825">
 
         <TextBlock 
@@ -48,7 +48,7 @@
             </Button>
         </Grid>
      
-        <TextBox x:Name="TextBox" Margin="662,521,10,10" />
+        <TextBox x:Name="TextBox" Margin="662,521,10,10" TextChanged="TextBox_TextChanged" />
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

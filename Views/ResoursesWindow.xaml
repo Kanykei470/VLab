@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VLab.Views"
         mc:Ignorable="d"
-        Title="ResoursesWindow"
+        Title="Материалы и Ресурсы"
         Icon="\Images\icon.ico"
         Width="1366"
         Height="728">
@@ -36,11 +36,21 @@
             Content="Добавить" 
             Background="#9CFF2E"
             FontSize="20"
-            Margin="1166,365,61,98">
+            Margin="1058,588,169,23" RenderTransformOrigin="5.42,0.737">
         </Button>
-   
-            <!--<DataGrid x:Name="DataTable" AutoGenerateColumns="False" Height="336" />-->
+        <DataGrid x:Name="DataGrid" 
+                  AutoGenerateColumns="True" 
+                  HorizontalAlignment="Left" 
+                  VerticalAlignment="Top" 
+                  Height="521" Width="798"
+                 
+                  Margin="58,111,0,0" Background="#FF191825" BorderBrush="{x:Null}" FontSize="24" GridLinesVisibility="None" >
+            <DataGrid.CellStyle>
+                <Style/>
+            </DataGrid.CellStyle>
+        </DataGrid>
 
+        <TextBox x:Name="TextBox" Margin="899,111,68,181"  />
 
 
     </Grid>

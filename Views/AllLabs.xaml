@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VLab.Views"
         mc:Ignorable="d"
-        Title="AllLabs"         
+        Title="Лабораторные Работы"         
         Width="1366"
         Height="728"
         Icon="\Images\icon.ico"
@@ -238,7 +238,7 @@
 
             <!--Panel5-->
             <Border Grid.Row="2"
-                    Grid.Column="1"
+                    Grid.Column="3"
                     CornerRadius="20"
                     Margin="20,20,20,20">
                     <!--MouseLeftButtonDown ="Border_noise"-->
