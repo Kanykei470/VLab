@@ -91,3 +91,4 @@ D:\VLab\obj\Debug\net6.0-windows\VLab.genruntimeconfig.cache
 D:\VLab\obj\Debug\net6.0-windows\ref\VLab.dll
 D:\VLab\obj\Debug\net6.0-windows\Views\TeacherWindow.g.cs
 D:\VLab\obj\Debug\net6.0-windows\Views\TeacherWindow.baml
+D:\VLab\obj\Debug\net6.0-windows\Views\TeacherMenu.g.cs
