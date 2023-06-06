@@ -93,6 +93,22 @@
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.9000000" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="Storyboard2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="41.432"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="5.891"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="141.513"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="17.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="rectangle1" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:00" Value="White"/>
+                <EasingColorKeyFrame KeyTime="00:00:01.8000000" Value="#FFF45050"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
     <Grid x:Name="grid" Width="500" Height="500" Margin="0,-7,0,-9" RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
@@ -103,15 +119,25 @@
                 <TranslateTransform/>
             </TransformGroup>
         </Grid.RenderTransform>
-        <Rectangle HorizontalAlignment="Center" Height="360" VerticalAlignment="Top" Width="360" Fill="#FF777575" Margin="0,56,0,0" RadiusX="20" RadiusY="20"/>
+        <Rectangle HorizontalAlignment="Center" Height="360" 
+                   VerticalAlignment="Top" Width="360" Fill="#FF777575" Margin="0,56,0,0" RadiusX="20" RadiusY="20"/>
 
 
 
 
 
         <Rectangle HorizontalAlignment="Center" Height="346" VerticalAlignment="Center" Width="380" Fill="White" RadiusX="20" RadiusY="20"/>
-        <Grid x:Name="Login" HorizontalAlignment="Left" Height="269" VerticalAlignment="Center" Width="338" Margin="60,0,0,0">
-            <Rectangle x:Name="rectangle1" HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="7" Fill="#FFF45050" Margin="0,3,0,0"/>
+        <Grid x:Name="Login" HorizontalAlignment="Left" Height="280" VerticalAlignment="Center" Width="338" Margin="60,0,0,0">
+            <Rectangle x:Name="rectangle1" HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="7" Fill="#FFF45050" Margin="0,3,0,0" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
             <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="49" Margin="12,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" FontSize="36" Foreground="#FFF45050" FontWeight="Bold"><Run Language="ru-ru" Text="Вход"/></TextBlock>
             <Rectangle HorizontalAlignment="Left" Height="2" Margin="44,94,0,0" Stroke="#FF656565" VerticalAlignment="Top" Width="291"/>
             <TextBox 
@@ -124,7 +150,7 @@
                 VerticalAlignment="Top" 
                 Width="296" 
                 FontSize="20" 
-                TextAlignment="Center" 
+                TextAlignment="Left" 
                 Background="{x:Null}" 
                 SelectionBrush="{x:Null}" 
                 BorderBrush="{x:Null}" 
@@ -164,7 +190,20 @@
                 Click="Button_Click" 
                 BorderBrush="{x:Null}" 
                 Foreground="White" FontWeight="Bold"/>
-            <TextBlock HorizontalAlignment="Left" Height="22" Margin="118,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" TextAlignment="Center" Foreground="#FF717070" FontSize="14"><Run Language="ru-ru" Text="Забыли пароль"/><Run Text="?"/></TextBlock>
+            <TextBlock 
+                HorizontalAlignment="Left" 
+                Height="33" Margin="118,255,0,0" 
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" 
+                Width="151" 
+                TextAlignment="Center" 
+                MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"
+                Foreground="#FF717070" 
+                FontSize="14">
+                    <Run Language="ru-ru" 
+                                   Text="Вы преподаватель"/>
+                <Run Text="?"/>
+            </TextBlock>
 
 
 
@@ -182,7 +221,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="58" Margin="410,113,0,0" TextWrapping="Wrap" Text="+" VerticalAlignment="Top" Width="58" FontSize="36" Foreground="White" TextAlignment="Center"/>
-        <Grid x:Name="Register" HorizontalAlignment="Left" Height="269" VerticalAlignment="Center" Width="360" Margin="60,0,0,0" Visibility="Hidden">
+        <Grid x:Name="Register" HorizontalAlignment="Left" Height="269" VerticalAlignment="Center" Width="360" Margin="60,0,0,0" Visibility="Hidden" d:IsHidden="True">
             <Grid.RowDefinitions>
                 <RowDefinition Height="204*"/>
                 <RowDefinition Height="65*"/>
@@ -199,7 +238,7 @@
             </Rectangle>
             <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="49" Margin="12,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" FontSize="36" Foreground="White" FontWeight="Bold" Text="Регистрация "/>
             <Rectangle x:Name="rectangle2" HorizontalAlignment="Left" Height="2" Margin="44,85,0,0" Stroke="White" VerticalAlignment="Top" Width="291"/>
-            <TextBox x:Name="UserName" HorizontalAlignment="Left" Height="33" Margin="40,58,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="296" FontSize="20" TextAlignment="Center" Background="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+            <TextBox x:Name="UserName" HorizontalAlignment="Left" Height="33" Margin="40,58,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="296" FontSize="20" TextAlignment="Left" Background="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
             <Rectangle x:Name="rectangle3" HorizontalAlignment="Left" Height="2" Margin="45,138,0,0" Stroke="White" VerticalAlignment="Top" Width="291"/>
             <TextBox 
                 x:Name="Email" 
@@ -208,7 +247,7 @@
                 Margin="44,105,0,0" 
                 TextWrapping="Wrap" 
                 Text="Почта" 
-                VerticalAlignment="Top" Width="296" FontSize="20" TextAlignment="Center" Background="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+                VerticalAlignment="Top" Width="296" FontSize="20" TextAlignment="Left" Background="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
             <Button 
                 x:Name="Registration" 
                 Content="Далее" 

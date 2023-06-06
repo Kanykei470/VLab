@@ -190,5 +190,12 @@ namespace VLab
         {
             Application.Current.Shutdown();
         }
+
+        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TeacherWindow teacher = new TeacherWindow();
+            teacher.Show();
+            Close();
+        }
     }
 }

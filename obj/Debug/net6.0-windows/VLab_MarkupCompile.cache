@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\VLab\App.xaml
-91788769812
+101553760512
 
-39-1456306127
+40-196028196
 228-1131842943
-MainWindow.xaml;Views\AllLabs.xaml;Views\Dock Style.xaml;Views\Information.xaml;Views\MainMenu.xaml;Views\NoiseWindow.xaml;Views\Question.xaml;Views\ResoursesWindow.xaml;Views\Settings.xaml;
+MainWindow.xaml;Views\AllLabs.xaml;Views\Dock Style.xaml;Views\Information.xaml;Views\MainMenu.xaml;Views\NoiseWindow.xaml;Views\Question.xaml;Views\ResoursesWindow.xaml;Views\Settings.xaml;Views\TeacherWindow.xaml;
 
 False
 
