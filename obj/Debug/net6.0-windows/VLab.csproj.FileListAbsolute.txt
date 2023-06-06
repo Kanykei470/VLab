@@ -92,3 +92,8 @@ D:\VLab\obj\Debug\net6.0-windows\ref\VLab.dll
 D:\VLab\obj\Debug\net6.0-windows\Views\TeacherWindow.g.cs
 D:\VLab\obj\Debug\net6.0-windows\Views\TeacherWindow.baml
 D:\VLab\obj\Debug\net6.0-windows\Views\TeacherMenu.g.cs
+D:\VLab\obj\Debug\net6.0-windows\Views\TeacherAllLabs.g.cs
+D:\VLab\obj\Debug\net6.0-windows\Views\TeacherMaterials.g.cs
+D:\VLab\obj\Debug\net6.0-windows\Views\TeacherMenu.baml
+D:\VLab\obj\Debug\net6.0-windows\Views\TeacherAllLabs.baml
+D:\VLab\obj\Debug\net6.0-windows\Views\TeacherMaterials.baml

@@ -1,0 +1,107 @@
+﻿<Window x:Class="VLab.Views.TeacherMaterials"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VLab.Views"
+        mc:Ignorable="d"
+        Title="Материалы и Ресурсы"
+        Icon="\Images\icon.ico"
+        Width="1366"
+        Height="728">
+    <Grid Background="#191825">
+        <Grid Height="50"
+              Width="55"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Top"
+              Margin="0,30,1253,0">
+
+            <Button
+                                x:Name="back"
+                                Click="BackButton_Click"
+                                Style="{StaticResource DockBtnStyle}" Margin="8,5,7,5">
+                <Button.Background>
+
+                    <ImageBrush ImageSource="D:/VLab/Views/Assets/img_back.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+            </Button>
+        </Grid>
+        <Button
+            x:Name="Upload_Btn"
+            Click="Upload_Btn_Click"
+            Content="Добавить" 
+            Background="#9CFF2E"
+            FontSize="20"
+            Margin="861,573,366,80" RenderTransformOrigin="5.42,0.737">
+        </Button>
+        <DataGrid x:Name="DataGrid" 
+                  AutoGenerateColumns="True" 
+                  HorizontalAlignment="Left" 
+                  VerticalAlignment="Top" 
+                  Height="420" Width="798"
+                 
+                  Margin="58,111,0,0" Background="#FF191825" BorderBrush="{x:Null}" FontSize="20" GridLinesVisibility="None" >
+            <DataGrid.CellStyle>
+                <Style/>
+            </DataGrid.CellStyle>
+        </DataGrid>
+
+        <TextBox x:Name="TextBox" Margin="899,111,68,181"  />
+        <Button
+            x:Name="Update_Btn"
+            Click="Update_Btn_Click"
+            Content="Обновить" 
+            Background="Yellow"
+            FontSize="20"
+            Margin="1029,573,198,80" RenderTransformOrigin="5.42,0.737"/>
+        <Button
+            x:Name="Delete_Btn"
+            Click="Delete_Btn_Click"
+            Content="Удалить" 
+            Background="Red"
+            FontSize="20"
+            Margin="1191,573,36,80" RenderTransformOrigin="5.42,0.737"/>
+        <TextBlock HorizontalAlignment="Left" Height="42" 
+                   Margin="58,573,0,0" TextWrapping="Wrap" 
+                   Foreground="White"
+                   FontSize="25"
+                   Text="Имя" VerticalAlignment="Top" Width="55"/>
+        <TextBlock HorizontalAlignment="Left" Height="42" 
+            Margin="450,573,0,0" TextWrapping="Wrap" 
+            Foreground="White"
+            FontSize="25"
+            Text="Путь" VerticalAlignment="Top" Width="55"/>
+        <ComboBox 
+            x:Name="comboBox"
+            HorizontalAlignment="Left" Height="42" Margin="58,639,0,0" VerticalAlignment="Top" Width="331"/>
+        <TextBox HorizontalAlignment="Left" 
+                 x:Name="NameOfFile"
+                 Margin="149,576,0,0" TextWrapping="Wrap" 
+                 FontSize="25"
+                 Text="" VerticalAlignment="Top" Width="240"/>
+        <TextBox HorizontalAlignment="Left" 
+                 x:Name="Path"
+            Margin="527,576,0,0" TextWrapping="Wrap" 
+            FontSize="25"
+            Text="" VerticalAlignment="Top" Width="290"/>
+        <Button
+            x:Name="Path_btn"
+            Click="Path_Click"
+            Content="Найти Файл" 
+            Background="Aqua"
+            FontSize="20"
+            Margin="861,643,365,10" RenderTransformOrigin="5.42,0.737"/>
+        <Button
+            x:Name="Clear"
+            Click="Clear_Click"
+            Content="Очистить" 
+            Background="Orange"
+            FontSize="20"
+            Margin="1029,643,197,10" RenderTransformOrigin="5.42,0.737"/>
+
+
+    </Grid>
+</Window>

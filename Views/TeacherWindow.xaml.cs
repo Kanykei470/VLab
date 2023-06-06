@@ -26,6 +26,7 @@ namespace VLab.Views
         public TeacherWindow()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -35,7 +36,7 @@ namespace VLab.Views
 
             if (VerifyUserCredentials(fullname, password))
             {
-                var mainMenu = new MainMenu(fullname);
+                TeacherMenu mainMenu = new TeacherMenu();
                 mainMenu.Show();
                 Close();
             }

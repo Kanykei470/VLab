@@ -25,6 +25,12 @@
     <Compile Update="Views\Settings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\TeacherAllLabs.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TeacherMaterials.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\TeacherMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -55,6 +61,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Settings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TeacherAllLabs.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TeacherMaterials.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\TeacherMenu.xaml">

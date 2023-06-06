@@ -69,7 +69,7 @@ namespace VLab.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/VLab;V1.0.0.0;component/views/alllabs.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/VLab;component/views/alllabs.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\AllLabs.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

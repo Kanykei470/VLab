@@ -30,14 +30,6 @@
 
             </Button>
         </Grid>
-        <Button
-            x:Name="Upload_Btn"
-            Click="Upload_Btn_Click"
-            Content="Добавить" 
-            Background="#9CFF2E"
-            FontSize="20"
-            Margin="1058,588,169,23" RenderTransformOrigin="5.42,0.737">
-        </Button>
         <DataGrid x:Name="DataGrid" 
                   AutoGenerateColumns="True" 
                   HorizontalAlignment="Left" 

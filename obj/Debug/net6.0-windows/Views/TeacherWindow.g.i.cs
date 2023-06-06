@@ -213,7 +213,7 @@ namespace VLab.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/VLab;V1.0.0.0;component/views/teacherwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/VLab;component/views/teacherwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\TeacherWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

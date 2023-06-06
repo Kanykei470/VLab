@@ -22,11 +22,19 @@ namespace VLab.Views
         public TeacherMenu()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
         }
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void Border_Materials(object sender, MouseButtonEventArgs e)
+        {
+            TeacherMaterials main = new TeacherMaterials();
+            main.Show();
+            Close();
         }
     }
 }

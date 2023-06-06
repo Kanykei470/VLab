@@ -48,28 +48,7 @@ namespace VLab.Views
 
         }
 
-        private void Upload_Btn_Click(object sender, RoutedEventArgs e)
-        {
-            //Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
-            //if (openFileDialog.ShowDialog() == true)
-            //{
-            //    string filePath = openFileDialog.FileName;
-            //    MessageBox.Show(filePath);
-            //    LoadWordFile(filePath);
-            //}
-
-
-            //Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
-            //openFileDialog.Filter = "Word Documents|*.docx";
-            //if (openFileDialog.ShowDialog() == true)
-            //{
-            //    string filePath = openFileDialog.FileName;
-            //    LoadWordFile(filePath);
-            //}
-        }
-
-
-       
+             
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
