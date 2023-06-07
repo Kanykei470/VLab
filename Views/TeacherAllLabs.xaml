@@ -10,7 +10,114 @@
         Background="#191825"
         Width="1366"
         Height="728">
-    <Grid>
-        
+    <Grid Background="#191825">
+        <Grid Height="50"
+              Width="55"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Top"
+              Margin="0,30,1253,0">
+
+            <Button
+                                x:Name="back"
+                                Click="BackButton_Click"
+                                Style="{StaticResource DockBtnStyle}" Margin="8,5,7,5">
+                <Button.Background>
+
+                    <ImageBrush ImageSource="D:/VLab/Views/Assets/img_back.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+            </Button>
+        </Grid>
+        <Button
+            x:Name="Upload_Btn"
+            Click="Upload_Btn_Click"
+            Content="Добавить" 
+            Background="#9CFF2E"
+            FontSize="20"
+            Margin="861,573,366,80" RenderTransformOrigin="5.42,0.737">
+        </Button>
+        <DataGrid x:Name="DataGrid" 
+                  AutoGenerateColumns="True" 
+                  HorizontalAlignment="Left" 
+                  VerticalAlignment="Center" 
+                  Height="493" Width="783"
+                 
+                  Margin="58,0,0,0" Background="#FF191825" BorderBrush="{x:Null}" FontSize="20" GridLinesVisibility="None" >
+            <DataGrid.CellStyle>
+                <Style/>
+            </DataGrid.CellStyle>
+        </DataGrid>
+        <Button
+            x:Name="Update_Btn"
+            Click="Update_Btn_Click"
+            Content="Обновить" 
+            Background="Yellow"
+            FontSize="20"
+            Margin="1029,573,198,80" RenderTransformOrigin="5.42,0.737"/>
+        <Button
+            x:Name="Delete_Btn"
+            Click="Delete_Btn_Click"
+            Content="Удалить" 
+            Background="Red"
+            FontSize="20"
+            Margin="1191,573,36,80" RenderTransformOrigin="5.42,0.737"/>
+        <TextBlock HorizontalAlignment="Left" Height="42" 
+                   Margin="889,111,0,0" TextWrapping="Wrap" 
+                   Foreground="White"
+                   FontSize="25"
+                   Text="Имя" VerticalAlignment="Top" Width="55" RenderTransformOrigin="8.666,-3.996"/>
+        <TextBox HorizontalAlignment="Left" 
+                 x:Name="NameOfFile"
+                 Margin="972,114,0,0" TextWrapping="Wrap" 
+                 FontSize="25"
+                 Text="" VerticalAlignment="Top" Width="338"/>
+        <Button
+            x:Name="Clear"
+            Click="Clear_Click"
+            Content="Очистить" 
+            Background="Orange"
+            FontSize="20"
+            Margin="1029,643,197,10" RenderTransformOrigin="5.42,0.737"/>
+        <TextBlock HorizontalAlignment="Left" Height="42" 
+            Margin="889,196,0,0" TextWrapping="Wrap" 
+            Foreground="White"
+            FontSize="25"
+            Text="Описание" VerticalAlignment="Top" Width="149" RenderTransformOrigin="8.666,-3.996"/>
+        <TextBlock HorizontalAlignment="Left" 
+            x:Name="Description"
+            Margin="889,253,0,0" TextWrapping="Wrap" 
+            FontSize="25"
+            Background="White"
+            Text="" VerticalAlignment="Top" Width="421" Height="89"/>
+        <TextBlock HorizontalAlignment="Left" Height="42" 
+            Margin="889,445,0,0" TextWrapping="Wrap" 
+            Foreground="White"
+            FontSize="25"
+            Text="Дата начала:" VerticalAlignment="Top" Width="167" RenderTransformOrigin="8.666,-3.996"/>
+        <TextBlock HorizontalAlignment="Left" Height="42" 
+            Margin="889,513,0,0" TextWrapping="Wrap" 
+            Foreground="White"
+            FontSize="25"
+            Text="Дата конца:" VerticalAlignment="Top" Width="167" RenderTransformOrigin="8.666,-3.996"/>
+        <Calendar Margin="1029,453,-58,109" 
+                  x:Name="calendar" 
+                  Visibility="Collapsed" 
+                  SelectedDatesChanged="calendar_SelectedDatesChanged"/>
+        <Button Grid.Row="0"  FontSize="20" Content="Выбрать даты" Click="OpenCalendar_Click" Margin="888,362,210,295" />
+        <TextBlock HorizontalAlignment="Left" Height="42" 
+            Margin="1094,445,0,0" TextWrapping="Wrap" 
+            Foreground="White"
+                   x:Name="start"
+            FontSize="25"
+            Text="" VerticalAlignment="Top" Width="166" RenderTransformOrigin="8.666,-3.996"/>
+        <TextBlock HorizontalAlignment="Left" Height="42" 
+            Margin="1094,507,0,0" TextWrapping="Wrap" 
+            Foreground="White"
+                   x:Name="end"
+            FontSize="25"
+            Text="" VerticalAlignment="Top" Width="166" RenderTransformOrigin="8.666,-3.996"/>
+
     </Grid>
 </Window>

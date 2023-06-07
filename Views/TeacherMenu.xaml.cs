@@ -36,5 +36,12 @@ namespace VLab.Views
             main.Show();
             Close();
         }
+
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TeacherAllLabs allLabs = new TeacherAllLabs();
+            allLabs.Show();
+            this.Close();
+        }
     }
 }

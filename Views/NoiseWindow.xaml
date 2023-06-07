@@ -12,21 +12,26 @@
     <Grid Background="#191825">
 
         <TextBlock 
-            Text="Экспериментальная установка" 
-            FontSize="20" 
+            Text="ИССЛЕДОВАНИЕ ПРОИЗВОДСТВЕННОГО ШУМА И ИЗУЧЕНИЕ МЕТОДОВ БОРЬБЫ С НИМ" 
+            FontSize="35" 
             Foreground="White"
+            TextAlignment="Center"
             FontWeight="Bold" 
-            Margin="58,108,506,526"/>
+            Margin="204,42,181,591"/>
 
-        <Canvas>
-            <!-- Добавьте элементы интерфейса для отображения экспериментальной установки -->
-            <!-- Например, рисуйте формы, кнопки, текстовые блоки и т.д. -->
-            <Button Content="Начать измерение" Click="StartMeasurement_Click" Canvas.Left="72" Canvas.Top="186" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBox x:Name="CurrentTextBox" Width="100" Height="30" Canvas.Left="236" Canvas.Top="182" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBox x:Name="VoltageGenTextBox" Width="100" Height="30" Canvas.Left="236" Canvas.Top="232" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBox x:Name="VoltageMeasTextBox" Width="100" Height="30" Canvas.Left="236" Canvas.Top="282" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <!-- Добавьте другие элементы интерфейса для ввода и отображения данных -->
-        </Canvas>
+       
+
+        <DataGrid x:Name="DataGrid" 
+                  AutoGenerateColumns="True" 
+                  HorizontalAlignment="Left" 
+                  VerticalAlignment="Top" 
+                  Height="163" Width="705"
+                 
+                  Margin="10,504,0,0" Background="#FF191825" BorderBrush="{x:Null}" FontSize="20" GridLinesVisibility="None" Grid.RowSpan="2" >
+            <DataGrid.CellStyle>
+                <Style/>
+            </DataGrid.CellStyle>
+        </DataGrid>
 
         <Grid Height="50"
               Width="55"
@@ -47,8 +52,8 @@
 
             </Button>
         </Grid>
-     
-        <TextBox x:Name="TextBox" Margin="662,521,10,10" TextChanged="TextBox_TextChanged" />
+
+        <TextBox x:Name="TextBox" Margin="738,521,10,10" TextChanged="TextBox_TextChanged" />
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

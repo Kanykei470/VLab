@@ -16,6 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VLab.Models;
 
 namespace VLab.Views
 {
@@ -81,7 +82,31 @@ namespace VLab.Views
 
         private void Delete_Btn_Click(object sender, RoutedEventArgs e)
         {
-          
+            DataRowView selectedRow = (DataRowView)DataGrid.SelectedItems[0];
+            DataRow dataRow = selectedRow.Row;
+            Material material = new Material
+            {
+                // Инициализируйте свойства вашей модели данных на основе значений в dataRow
+                Name = dataRow["Имя"].ToString(),
+                Material1 = dataRow["Материал"].ToString(),
+                IdMaterials = (short)Convert.ToInt32(dataRow["id_Materials"])
+            };
+
+            // Далее используйте объект material по вашему усмотрению
+
+            int selectedId = material.IdMaterials;// Предположим, что у вас есть поле Id в модели данных
+
+
+            string query = "DELETE FROM YourTable WHERE Id = @selectedId";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@selectedId", selectedId);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+
+
         }
 
         private void Update_Btn_Click(object sender, RoutedEventArgs e)
