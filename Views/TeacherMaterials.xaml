@@ -76,7 +76,8 @@
             Text="Путь" VerticalAlignment="Top" Width="55"/>
         <ComboBox 
             x:Name="comboBox"
-            HorizontalAlignment="Left" Height="42" Margin="58,639,0,0" VerticalAlignment="Top" Width="331"/>
+            HorizontalAlignment="Left" Height="42" Margin="58,639,0,0" 
+            VerticalAlignment="Top" Width="331"/>
         <TextBox HorizontalAlignment="Left" 
                  x:Name="NameOfFile"
                  Margin="149,576,0,0" TextWrapping="Wrap" 

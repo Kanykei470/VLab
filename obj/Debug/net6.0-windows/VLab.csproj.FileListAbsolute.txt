@@ -97,3 +97,7 @@ D:\VLab\obj\Debug\net6.0-windows\Views\TeacherMaterials.g.cs
 D:\VLab\obj\Debug\net6.0-windows\Views\TeacherMenu.baml
 D:\VLab\obj\Debug\net6.0-windows\Views\TeacherAllLabs.baml
 D:\VLab\obj\Debug\net6.0-windows\Views\TeacherMaterials.baml
+D:\VLab\obj\Debug\net6.0-windows\Views\TeacherAllStudents.g.cs
+D:\VLab\obj\Debug\net6.0-windows\Views\TeacherAllStudents.baml
+D:\VLab\bin\Debug\net6.0-windows\LiveCharts.dll
+D:\VLab\bin\Debug\net6.0-windows\LiveCharts.Wpf.dll

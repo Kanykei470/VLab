@@ -37,7 +37,7 @@ namespace VLab.Views
                 connection.Open();
 
                 // Выполните SQL-запрос
-                string sqlQuery = "SELECT Name as Имя, Material as Материал FROM Materials";
+                string sqlQuery = "SELECT id_Materials,Name,Material FROM Materials";
                 SqlCommand command = new SqlCommand(sqlQuery, connection);
 
                 // Создайте объект SqlDataAdapter для извлечения данных из базы данных
@@ -87,8 +87,8 @@ namespace VLab.Views
             Material material = new Material
             {
                 // Инициализируйте свойства вашей модели данных на основе значений в dataRow
-                Name = dataRow["Имя"].ToString(),
-                Material1 = dataRow["Материал"].ToString(),
+                Name = dataRow["Name"].ToString(),
+                Material1 = dataRow["Material"].ToString(),
                 IdMaterials = (short)Convert.ToInt32(dataRow["id_Materials"])
             };
 
@@ -97,7 +97,7 @@ namespace VLab.Views
             int selectedId = material.IdMaterials;// Предположим, что у вас есть поле Id в модели данных
 
 
-            string query = "DELETE FROM YourTable WHERE Id = @selectedId";
+            string query = "DELETE FROM Materials WHERE id_Materials = @selectedId";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
@@ -117,7 +117,7 @@ namespace VLab.Views
                 connection.Open();
 
                 // Выполните SQL-запрос
-                string sqlQuery = "SELECT Name as Имя, Material as Материал FROM Materials";
+                string sqlQuery = "SELECT id_Materials,Name,Material FROM Materials";
                 SqlCommand command = new SqlCommand(sqlQuery, connection);
 
                 // Создайте объект SqlDataAdapter для извлечения данных из базы данных
@@ -224,7 +224,7 @@ namespace VLab.Views
             // Проверить, что строка не является null
             if (selectedRow != null)
             {
-                string filePath = selectedRow.Row["Материал"].ToString();
+                string filePath = selectedRow.Row["Material"].ToString();
                 // Открыть файл в Microsoft Word
                 //LoadWordFile("D:\\VLab\\Resourses\\" + filePath);
                 LoadWordFile(filePath);

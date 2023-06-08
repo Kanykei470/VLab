@@ -95,7 +95,9 @@ namespace VLab.Views
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-
+            TeacherMenu teacher = new TeacherMenu();
+            teacher.Show();
+            this.Close();
         }
     }
 
