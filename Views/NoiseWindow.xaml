@@ -65,15 +65,6 @@
             FontSize="25"
             Text="63 Гц" VerticalAlignment="Top" Width="82"/>
 
-
-
-
-
-
-
-
-
-
         <Grid Background="#191825" Margin="-5,4,5,28" Grid.RowSpan="2">
 
 

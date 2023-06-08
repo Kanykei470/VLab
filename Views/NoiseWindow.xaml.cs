@@ -20,9 +20,6 @@ using Microsoft.Win32;
 using System.Windows.Xps.Packaging;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using LiveCharts.Wpf;
-using LiveCharts;
-using LiveCharts.Defaults;
 
 namespace VLab.Views
 {
@@ -225,139 +222,16 @@ namespace VLab.Views
                     MessageBox.Show("Не все результаты получены.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-
-                //ПРОВЕРКА ДАННЫХ НА ОГРАГИЧЕНИЯ
-                //if (string.IsNullOrEmpty(g63.Text) || string.IsNullOrEmpty(g125.Text) ||
-                //  string.IsNullOrEmpty(g250.Text) || string.IsNullOrEmpty(g500.Text) ||
-                //  string.IsNullOrEmpty(g1000.Text) || string.IsNullOrEmpty(g2000.Text) ||
-                //  string.IsNullOrEmpty(g4000.Text) || string.IsNullOrEmpty(g8000.Text)
-                //  )
-                //{
-                //    MessageBox.Show("Не все результаты получены.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                //    return;
-                //}
-
-
+            // Откройте соединение
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                int g63Value = Convert.ToInt16(g63.Text);
-                int g125Value = Convert.ToInt16(g125.Text);
-                int g250Value = Convert.ToInt16(g250.Text);
-                int g500Value = Convert.ToInt16(g500.Text);
-                int g1000Value = Convert.ToInt16(g1000.Text);
-                int g2000Value = Convert.ToInt16(g2000.Text);
-                int g4000Value = Convert.ToInt16(g4000.Text);
-                int g8000Value = Convert.ToInt16(g8000.Text);
 
-                int lvlDBA = (g63Value + g125Value + g250Value + g500Value + g1000Value + g2000Value + g4000Value + g8000Value) / 8;
-
-                string query = "UPDATE Levels_Of_Noise SET [63_lvl] = @g63Value, [125_lvl] = @g125Value," +
-                                                           "[250_lvl] = @g250Value, [500_lvl] = @g500Value, " +
-                                                           "[1000_lvl] = @g1000Value, [2000_lvl] = @g2000Value," +
-                                                           "[4000_lvl] = @g4000Value, [8000_lvl] = @g8000Value, Level_Of_DBA = @lvlDBA WHERE id_Levels_Of_Noise = 1";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    connection.Open();
-                    // Устанавливаем значения параметров в запросе
-                    command.Parameters.AddWithValue("@g63Value", g63Value);
-                    command.Parameters.AddWithValue("@g125Value", g125Value);
-                    command.Parameters.AddWithValue("@g250Value", g250Value);
-                    command.Parameters.AddWithValue("@g500Value", g500Value);
-                    command.Parameters.AddWithValue("@g1000Value", g1000Value);
-                    command.Parameters.AddWithValue("@g2000Value", g2000Value);
-                    command.Parameters.AddWithValue("@g4000Value", g4000Value);
-                    command.Parameters.AddWithValue("@g8000Value", g8000Value);
-                    command.Parameters.AddWithValue("@lvlDBA", lvlDBA);
-
-
-                    // Выполняем обновление данных
-                    command.ExecuteNonQuery();
-                    connection.Close();
-
-                    MessageBox.Show("Были произведены расчеты", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
             }
-            Charts.IsEnabled = true;
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
            
-        }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                // Откройте соединение
-                connection.Open();
-
-                // Выполните SQL-запрос
-                string sqlQuery = "SELECT * FROM Levels_Of_Noise";
-                SqlCommand command = new SqlCommand(sqlQuery, connection);
-
-                // Создайте объект SqlDataAdapter для извлечения данных из базы данных
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-
-                // Создайте объект DataTable для хранения результирующих данных
-                System.Data.DataTable dataTable = new System.Data.DataTable();
-
-                // Заполните DataTable данными из базы данных
-                adapter.Fill(dataTable);
-
-                // Назначьте DataTable свойству ItemsSource вашего DataGrid
-                DataGrid.ItemsSource = dataTable.DefaultView;
-
-                // Закройте соединение
-                connection.Close();
-            }
-        }
-
-        private void Button_Click_5(object sender, RoutedEventArgs e)
-        {
-            int g63Value = Convert.ToInt16(g63.Text);
-            int g125Value = Convert.ToInt16(g125.Text);
-            int g250Value = Convert.ToInt16(g250.Text);
-            int g500Value = Convert.ToInt16(g500.Text);
-            int g1000Value = Convert.ToInt16(g1000.Text);
-            int g2000Value = Convert.ToInt16(g2000.Text);
-            int g4000Value = Convert.ToInt16(g4000.Text);
-            int g8000Value = Convert.ToInt16(g8000.Text);
-            ChartValues<ObservablePoint> chartData = new ChartValues<ObservablePoint>
-            {
-                new ObservablePoint(63 ,g63Value),
-                new ObservablePoint(125 ,g125Value),
-                new ObservablePoint(250 ,g250Value),
-                new ObservablePoint(500 ,g500Value),
-                new ObservablePoint(1000 ,g1000Value),
-                new ObservablePoint(2000 ,g2000Value),
-                new ObservablePoint(4000 ,g4000Value),
-                new ObservablePoint(8000 ,g8000Value),
-                
-                
-               
-            };
-
-            // Создание графика
-            CartesianChart chart = new CartesianChart
-            {
-                Series = new LiveCharts.SeriesCollection
-                {
-                    new LineSeries { Values = chartData }
-                }
-            };
-
-            // Создание окна
-            System.Windows.Window chartWindow = new System.Windows.Window
-            {
-                Title = "График",
-                Content = chart,
-                Width = 600,
-                Height = 400
-            };
-
-            // Открытие выплывающего окна
-            chartWindow.ShowDialog();
         }
     }
 }
