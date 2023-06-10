@@ -52,9 +52,9 @@ namespace VLab.Views
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            MainMenu menu = new MainMenu("123");
-            menu.Show();
-            this.Close();
+            //MainMenu menu = new MainMenu("123");
+            //menu.Show();
+            //this.Close();
         }
 
         private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)

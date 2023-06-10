@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VLab.Models;
 using VLab.Views;
 
 namespace VLab
@@ -25,6 +26,8 @@ namespace VLab
     public partial class MainWindow : Window
     {
         private string connectionString = "Server=DROPSOFJUPITER;Database=VirtualLab;Trusted_Connection=True;TrustServerCertificate=True;";
+
+        public Student student;
 
         public MainWindow()
         {
@@ -56,7 +59,13 @@ namespace VLab
 
             if (VerifyUserCredentials(fullname, password))
             {
-                var mainMenu = new MainMenu(fullname);
+                Student student = new Student
+                {
+                    FullName = fullname,
+                    IdGroup = 1
+                   
+                };
+                var mainMenu = new MainMenu(student);
                 mainMenu.Show();
                 Close();
             }

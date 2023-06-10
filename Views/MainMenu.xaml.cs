@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Office2010.Excel;
+using DocumentFormat.OpenXml.Wordprocessing;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VLab.Models;
 
 namespace VLab.Views
 {
@@ -20,14 +23,16 @@ namespace VLab.Views
     /// </summary>
     public partial class MainMenu : Window
     {
-        public string name;
-        public MainMenu(string name)
+        Student student;
+        public MainMenu(Student student)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
-            this.name = name;
-        }
+            //Student student1= student;
+            this.student = student;
 
+        }
+       
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -81,7 +86,8 @@ namespace VLab.Views
 
         private void Border_noise(object sender, MouseButtonEventArgs e)
         {
-            NoiseWindow noise = new NoiseWindow();
+            this.student = student;
+            NoiseWindow noise = new NoiseWindow(student);
             noise.Show();
             Close();
         }

@@ -23,6 +23,7 @@ using System.Diagnostics;
 using LiveCharts.Wpf;
 using LiveCharts;
 using LiveCharts.Defaults;
+using VLab.Models;
 
 namespace VLab.Views
 {
@@ -33,8 +34,10 @@ namespace VLab.Views
     {
         public string connectionString = "Server=DROPSOFJUPITER;Database=VirtualLab;Trusted_Connection=True;TrustServerCertificate=True;";
 
-        
-        public NoiseWindow()
+        Student student;
+        private TeacherResults teacherResults = new TeacherResults();
+
+        public NoiseWindow(Student student)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
@@ -63,14 +66,13 @@ namespace VLab.Views
                 connection.Close();
             }
 
-           
+            this.student = student;
+
+
             LoadWordFile("D:\\VLab\\Resourses\\Шум.docx");
         }
 
-        private void LoadWordFileButton_Click(object sender, RoutedEventArgs e)
-        {
-           
-        }
+
 
         private void LoadWordFile(string filePath)
         {
@@ -99,12 +101,12 @@ namespace VLab.Views
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            MainMenu menu = new MainMenu("123");
-            menu.Show();
-            this.Close();
+            //MainMenu menu = new MainMenu("123");
+            //menu.Show();
+            //this.Close();
         }
 
-       
+
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -118,7 +120,7 @@ namespace VLab.Views
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            mediaElement2.Stop();    
+            mediaElement2.Stop();
         }
 
         private void NameOfFile_TextChanged(object sender, TextChangedEventArgs e)
@@ -204,38 +206,38 @@ namespace VLab.Views
             int sliderValue = (int)slider.Value;
             g1000.Text = sliderValue.ToString();
         }
-            
+
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             int volume = (int)e.NewValue;
-            mediaElement2.Volume = volume/1000;
+            mediaElement2.Volume = volume / 1000;
             //MessageBox.Show(mediaElement2.Volume.ToString());
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            
-          
-                if (string.IsNullOrEmpty(g63.Text) || string.IsNullOrEmpty(g125.Text) ||
-                    string.IsNullOrEmpty(g250.Text) || string.IsNullOrEmpty(g500.Text) ||
-                    string.IsNullOrEmpty(g1000.Text) || string.IsNullOrEmpty(g2000.Text) ||
-                    string.IsNullOrEmpty(g4000.Text) || string.IsNullOrEmpty(g8000.Text) 
-                    )
-                {
-                    MessageBox.Show("Не все результаты получены.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
 
-                //ПРОВЕРКА ДАННЫХ НА ОГРАГИЧЕНИЯ
-                //if (string.IsNullOrEmpty(g63.Text) || string.IsNullOrEmpty(g125.Text) ||
-                //  string.IsNullOrEmpty(g250.Text) || string.IsNullOrEmpty(g500.Text) ||
-                //  string.IsNullOrEmpty(g1000.Text) || string.IsNullOrEmpty(g2000.Text) ||
-                //  string.IsNullOrEmpty(g4000.Text) || string.IsNullOrEmpty(g8000.Text)
-                //  )
-                //{
-                //    MessageBox.Show("Не все результаты получены.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                //    return;
-                //}
+
+            if (string.IsNullOrEmpty(g63.Text) || string.IsNullOrEmpty(g125.Text) ||
+                string.IsNullOrEmpty(g250.Text) || string.IsNullOrEmpty(g500.Text) ||
+                string.IsNullOrEmpty(g1000.Text) || string.IsNullOrEmpty(g2000.Text) ||
+                string.IsNullOrEmpty(g4000.Text) || string.IsNullOrEmpty(g8000.Text)
+                )
+            {
+                MessageBox.Show("Не все результаты получены.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            //ПРОВЕРКА ДАННЫХ НА ОГРАГИЧЕНИЯ
+            //if (string.IsNullOrEmpty(g63.Text) || string.IsNullOrEmpty(g125.Text) ||
+            //  string.IsNullOrEmpty(g250.Text) || string.IsNullOrEmpty(g500.Text) ||
+            //  string.IsNullOrEmpty(g1000.Text) || string.IsNullOrEmpty(g2000.Text) ||
+            //  string.IsNullOrEmpty(g4000.Text) || string.IsNullOrEmpty(g8000.Text)
+            //  )
+            //{
+            //    MessageBox.Show("Не все результаты получены.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    return;
+            //}
 
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -282,7 +284,51 @@ namespace VLab.Views
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-           
+            string name = student.FullName; // Заданное имя, для которого нужно получить id
+            int id = 0;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT id_Students FROM Students WHERE Full_Name = @name";
+
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@name", name);
+
+                    // Выполнение запроса и получение результата
+                    object result = command.ExecuteScalar();
+
+                    // Преобразование результата к нужному типу (например, int)
+                    if (result != null && result != DBNull.Value)
+                    {
+                        id = Convert.ToInt32(result);
+                        // Использование полученного id
+                    }
+
+                }
+            }
+            int labwork = 1;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+
+                string query = "INSERT INTO Results (id_Student, id_LabWork) VALUES (@id, @labwork)";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@labwork", labwork);
+
+
+
+                command.ExecuteNonQuery();
+
+                MessageBox.Show("Результаты были отправлены", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            }
+
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
@@ -333,9 +379,6 @@ namespace VLab.Views
                 new ObservablePoint(2000 ,g2000Value),
                 new ObservablePoint(4000 ,g4000Value),
                 new ObservablePoint(8000 ,g8000Value),
-                
-                
-               
             };
 
             // Создание графика
@@ -358,6 +401,9 @@ namespace VLab.Views
 
             // Открытие выплывающего окна
             chartWindow.ShowDialog();
-        }
+
+        } 
+      
     }
+
 }

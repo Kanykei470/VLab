@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VLab.Models;
 
 namespace VLab.Views
 {
@@ -21,7 +22,7 @@ namespace VLab.Views
     /// </summary>
     public partial class Information : Window
     {
-
+        Student student;
         public Information()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace VLab.Views
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            MainMenu menu = new MainMenu("123");
+            MainMenu menu = new MainMenu(student);
             menu.Show();
             this.Close();
         }

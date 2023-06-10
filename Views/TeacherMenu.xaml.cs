@@ -50,5 +50,12 @@ namespace VLab.Views
             allStudents.Show();
             this.Close();
         }
+
+        private void Border_MouseLeftButtonDown_2(object sender, MouseButtonEventArgs e)
+        {
+            TeacherResults allStudents = new TeacherResults();
+            allStudents.Show();
+            this.Close();
+        }
     }
 }

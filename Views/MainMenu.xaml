@@ -525,7 +525,7 @@
 
                         <Border Style="{StaticResource user_border}">
 
-                            <TextBlock Text="Arun Mutharasu"
+                            <TextBlock Text="Admin"
                                        Style="{StaticResource PopupText}" />
 
                         </Border>
