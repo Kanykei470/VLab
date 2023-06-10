@@ -17,7 +17,7 @@
             Foreground="White"
             TextAlignment="Center"
             FontWeight="Bold" 
-            Margin="118,37,65,566"/>
+            Margin="118,37,65,698"/>
 
         <Grid Height="50"
               Width="55"
@@ -39,7 +39,6 @@
             </Button>
         </Grid>
 
-        <Image Margin="58,153,746,238" Source="/Image250.jpg" Stretch="Fill"/>
         <Button Content="Включить звук" 
                 HorizontalAlignment="Left" Height="57" 
                 Margin="820,148,0,0"
@@ -53,12 +52,7 @@
             HorizontalAlignment="Left" 
             Height="30" Margin="1271,486,0,0" 
             VerticalAlignment="Top" Width="82"></MediaElement>
-        <Button Content="Выключить звук" 
-            HorizontalAlignment="Left" Height="57" 
-            Margin="925,148,0,0"
-            Click="Button_Click_1"
-                
-            VerticalAlignment="Top" Width="100"/>
+      
         <TextBlock HorizontalAlignment="Left" Height="42" 
             Margin="738,280,0,0" TextWrapping="Wrap" 
             Foreground="White"
@@ -89,7 +83,7 @@
                     Foreground="White"
                     TextAlignment="Center"
                     FontWeight="Bold" 
-                    Margin="118,37,65,1006"/>
+                    Margin="118,37,65,1071"/>
 
 
             <DataGrid x:Name="DataGrid" 
@@ -98,7 +92,7 @@
                   VerticalAlignment="Top" 
                   Height="184" Width="837"
                  IsReadOnly="False"
-                  Margin="464,507,0,0" Background="#FF191825" BorderBrush="{x:Null}" FontSize="20" GridLinesVisibility="None" >
+                  Margin="492,509,0,0" Background="#FF191825" BorderBrush="{x:Null}" FontSize="20" GridLinesVisibility="None" >
                 <DataGrid.CellStyle>
                     <Style/>
                 </DataGrid.CellStyle>

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VLab.Models;
 
 namespace VLab.Views
 {
@@ -35,6 +36,14 @@ namespace VLab.Views
             //MainMenu menu = new MainMenu("123");
             //menu.Show();
             //this.Close();
+        }
+
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+           
+            DustWindow dust = new DustWindow();
+            dust.Show();
+            Close();
         }
     }
 }

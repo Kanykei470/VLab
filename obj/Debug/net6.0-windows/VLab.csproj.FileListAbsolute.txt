@@ -106,3 +106,7 @@ D:\VLab\obj\Debug\net6.0-windows\Views\TeacherResults.baml
 D:\VLab\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll
 D:\VLab\bin\Debug\net6.0-windows\Prism.dll
 D:\VLab\bin\Debug\net6.0-windows\Prism.Wpf.dll
+D:\VLab\obj\Debug\net6.0-windows\Views\IlluminationWindow.g.cs
+D:\VLab\obj\Debug\net6.0-windows\Views\DustWindow.g.cs
+D:\VLab\obj\Debug\net6.0-windows\Views\IlluminationWindow.baml
+D:\VLab\obj\Debug\net6.0-windows\Views\DustWindow.baml

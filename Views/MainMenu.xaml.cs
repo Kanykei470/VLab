@@ -94,7 +94,10 @@ namespace VLab.Views
 
         private void Border_lights(object sender, MouseButtonEventArgs e)
         {
-
+            this.student = student;
+            IlluminationWindow lights = new IlluminationWindow(student);
+            lights.Show();
+            Close();
         }
 
         private void Border_microclimat(object sender, MouseButtonEventArgs e)

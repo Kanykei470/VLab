@@ -10,6 +10,12 @@
     <Compile Update="Views\AllLabs.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\DustWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\IlluminationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Information.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -52,6 +58,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Dock Style.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DustWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\IlluminationWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Information.xaml">
