@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.InkML;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -11,6 +12,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
@@ -28,6 +30,7 @@ namespace VLab.Views
         DispatcherTimer timer = new DispatcherTimer();
 
         public int count = 0;
+        double weight = 0.001;
         Student student;
         public DustWindow()
         {
@@ -59,8 +62,9 @@ namespace VLab.Views
             }
             Random random = new Random();
             Temp.Content = (random.Next(10, 30)).ToString();
+            Weight.Content = 0.00;
 
-            
+
 
         }
 
@@ -78,11 +82,23 @@ namespace VLab.Views
            
             //}
             timer.Start();
+
+
+
+            
+            Filter.Background = Brushes.White;
+            Filter.Name = "Filter"; // Устанавливаем идентификатор элемента
+            // Добавляем canvas2 на страницу
+
+            // Применяем анимацию к нужному канвасу
+            ApplyAnimationToCanvas(Filter);
+
         }
 
         private void Button_Stop(object sender, RoutedEventArgs e)
         {
             timer.Stop();
+            Weight.Content = weight.ToString();
         }
         private void Timer_Tick(object sender, EventArgs e)
         {
@@ -108,14 +124,30 @@ namespace VLab.Views
                 double y = random.NextDouble() * maxY;
 
                 // Установка позиции кружка на панели Canvas
-                Canvas.SetLeft(ellipse, x);
-                Canvas.SetTop(ellipse, y);
+                System.Windows.Controls.Canvas.SetLeft(ellipse, x);
+                System.Windows.Controls.Canvas.SetTop(ellipse, y);
 
                 // Добавление кружка на панель Canvas
                 circlePanel.Children.Add(ellipse);
             }
             count++;
             Time.Content = count.ToString();
+            weight = (count * 0.014);
+        }
+        private void ApplyAnimationToCanvas(System.Windows.Controls.Canvas canvas)
+        {
+            // Создаем анимацию цвета фона
+            var colorAnimation = new ColorAnimation();
+            colorAnimation.From = Colors.White;
+            colorAnimation.To = Colors.Brown;
+            colorAnimation.Duration = TimeSpan.FromSeconds(40);
+
+            // Создаем трансляцию
+            var brush = new SolidColorBrush(Colors.White);
+            brush.BeginAnimation(SolidColorBrush.ColorProperty, colorAnimation);
+
+            // Применяем анимацию к указанному канвасу
+            canvas.Background = brush;
         }
     }
 }

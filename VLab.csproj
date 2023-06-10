@@ -12,7 +12,14 @@
     <None Remove="Image1.png" />
     <None Remove="Image2.png" />
     <None Remove="Image250.jpg" />
+    <None Remove="Image3.png" />
+    <None Remove="Image4.png" />
     <None Remove="Images\icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image3.png" />
+    <Resource Include="Image4.png" />
   </ItemGroup>
 
   <ItemGroup>
