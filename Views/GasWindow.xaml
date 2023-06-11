@@ -38,6 +38,7 @@
 
             </Button>
         </Grid>
+
         <DataGrid x:Name="DataGrid" 
                   AutoGenerateColumns="True" 
                   HorizontalAlignment="Left" 
@@ -61,7 +62,7 @@
 
             </Image.ToolTip>
         </Image>
-        <Image Margin="86,532,829,28" 
+        <Image Margin="89,532,858,28" 
                Source="/Image6.png" 
                Stretch="Fill" 
                RenderTransformOrigin="0.509,2.45">
@@ -78,7 +79,7 @@
             Background="Red"
             FontSize="15"
             Click="Button_Stop" 
-            Margin="484,257,774,409" />
+            Margin="356,374,902,292" />
         <Label Content="Время:" 
             Foreground="White"
             FontSize="14"
@@ -92,7 +93,81 @@
             Foreground="White"
             FontSize="14"
             Margin="454,188,860,473"/>
-        <Canvas x:Name="Filter" Margin="351,434,840,209"/>
+        <Canvas x:Name="Filter" 
+                Background="White"
+                Margin="583,188,696,269"/>
+        <ComboBox 
+            x:Name="comboBox"
+            HorizontalAlignment="Left"
+            FontSize ="14" 
+            Height="30" Margin="356,143,0,0" 
+            VerticalAlignment="Top" Width="182"/>
+        <Label Content="Протягиваемый объем воздуха:" 
+            Foreground="White"
+            FontSize="14"
+            Margin="789,142,350,519"/>
+        <Label Content="" 
+            x:Name="Air"
+            Foreground="White"
+            FontSize="14"
+            Margin="1015,144,290,517" RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="мл" 
+            Foreground="White"
+            FontSize="14"
+            Margin="1081,144,196,517"/>
+        <Label Content="Цвет индикаторного порошка ДО ОПЫТА:" 
+            Foreground="White"
+            FontSize="14"
+            Margin="789,212,289,449"/>
+        <Label Content="White" 
+            x:Name="ColorBefore"
+            Foreground="White"
+            FontSize="14"
+            Margin="1085,212,162,449" RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="Цвет индикаторного порошка ПОСЛЕ ОПЫТА:" 
+            Foreground="White"
+            FontSize="14"
+            Margin="789,284,256,377"/>
+        <Label Content="" 
+            x:Name="ColorAfter"
+            Foreground="White"
+            FontSize="14"
+            Margin="1112,286,106,356" RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="Концентрация яда в воздухе :" 
+            Foreground="White"
+            FontSize="14"
+            Margin="789,354,358,307" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.081"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="" 
+            x:Name="C"
+            Foreground="White"
+            FontSize="14"
+            Margin="1024,354,256,309" RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="ПДК:" 
+            Foreground="White"
+            FontSize="14"
+            Margin="933,414,372,246"/>
+        <Label Content="" 
+            x:Name="PDK"
+            Foreground="White"
+            FontSize="14"
+            Margin="998,412,303,250" RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="мг/м3 " 
+            Foreground="White"
+            FontSize="14"
+            Margin="1116,352,162,309"/>
+        <Label Content="мг/м3 " 
+            Foreground="White"
+            FontSize="14"
+            Margin="1072,412,206,249"/>
 
     </Grid>
 </Window>
