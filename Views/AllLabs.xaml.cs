@@ -45,5 +45,12 @@ namespace VLab.Views
             dust.Show();
             Close();
         }
+
+        private void Border_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        {
+            GasWindow dust = new GasWindow();
+            dust.Show();
+            Close();
+        }
     }
 }

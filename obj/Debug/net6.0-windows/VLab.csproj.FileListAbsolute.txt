@@ -110,3 +110,5 @@ D:\VLab\obj\Debug\net6.0-windows\Views\IlluminationWindow.g.cs
 D:\VLab\obj\Debug\net6.0-windows\Views\DustWindow.g.cs
 D:\VLab\obj\Debug\net6.0-windows\Views\IlluminationWindow.baml
 D:\VLab\obj\Debug\net6.0-windows\Views\DustWindow.baml
+D:\VLab\obj\Debug\net6.0-windows\Views\GasWindow.g.cs
+D:\VLab\obj\Debug\net6.0-windows\Views\GasWindow.baml

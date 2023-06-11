@@ -13,6 +13,9 @@
     <Compile Update="Views\DustWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\GasWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\IlluminationWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -61,6 +64,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\DustWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\GasWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\IlluminationWindow.xaml">

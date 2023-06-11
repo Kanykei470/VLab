@@ -144,8 +144,16 @@
             Foreground="White"
             FontSize="14"
             Margin="1141,242,142,419"/>
-        <Image Margin="619,320,406,253" Source="/Image3.png" Stretch="Fill"/>
-        <Image Margin="965,320,65,253" Source="/Image4.png" Stretch="Fill"/>
+        <Image Margin="619,320,406,253" Source="/Image3.png" Stretch="Fill">
+            <Image.ToolTip>
+                <ToolTip Content="Формула вычисления объема воздуха" />
+            </Image.ToolTip>
+        </Image>
+        <Image Margin="965,320,65,253" Source="/Image4.png" Stretch="Fill">
+            <Image.ToolTip>
+                <ToolTip Content="Формула вычисления концентрации пыли" />
+            </Image.ToolTip>
+        </Image>
         <Canvas x:Name="Filter" Margin="414,390,777,253"></Canvas>
         <Button Content="Рассчитать" 
             HorizontalAlignment="Left" Height="57" 
@@ -154,8 +162,13 @@
             VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.508,1.843"/>
         <Button Content="Обновить" 
             HorizontalAlignment="Left" Height="57" 
-            Margin="36,587,0,0"
+            Margin="36,573,0,0"
             Click="Button_Click"
+            VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.508,1.843"/>
+        <Button Content="Отправить" 
+            HorizontalAlignment="Left" Height="57" 
+            Margin="36,645,0,0"
+            Click="Button_Click_1"
             VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.508,1.843"/>
     </Grid>
 </Window>

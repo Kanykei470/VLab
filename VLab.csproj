@@ -14,6 +14,8 @@
     <None Remove="Image250.jpg" />
     <None Remove="Image3.png" />
     <None Remove="Image4.png" />
+    <None Remove="Image5.png" />
+    <None Remove="Image6.png" />
     <None Remove="Images\icon.ico" />
   </ItemGroup>
 
@@ -29,6 +31,8 @@
 
   <ItemGroup>
     <Resource Include="Image1.png" />
+    <Resource Include="Image5.png" />
+    <Resource Include="Image6.png" />
     <Resource Include="Images\icon.ico" />
   </ItemGroup>
 

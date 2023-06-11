@@ -244,8 +244,8 @@
             <Border Grid.Row="2"
                     Grid.Column="3"
                     CornerRadius="20"
-                    Margin="20,20,20,20">
-                    <!--MouseLeftButtonDown ="Border_noise"-->
+                    Margin="20,20,20,20"
+                    MouseLeftButtonDown ="Border_MouseLeftButtonDown_1" >
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0.75,0"
                                          EndPoint="0,1">
