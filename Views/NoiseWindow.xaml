@@ -237,7 +237,7 @@
                     MouseDoubleClick="g8000_MouseDoubleClick"
                     Text="" VerticalAlignment="Top" Width="166" Height="34"/>
             <Image Margin="58,386,656,649" Source="/Image2.png" Stretch="Fill"/>
-            <Button Content="Расчитать" 
+            <Button Content="Рассчитать" 
                     HorizontalAlignment="Left" Height="57" 
                     Margin="317,522,0,0"
                     Click="Button_Click_2"
