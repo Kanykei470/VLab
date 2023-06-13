@@ -43,9 +43,9 @@
                   AutoGenerateColumns="True" 
                   HorizontalAlignment="Left" 
                   VerticalAlignment="Top" 
-                  Height="184" Width="748"
+                  Height="156" Width="748"
                  IsReadOnly="False"
-                  Margin="583,504,0,0" Background="#FF191825" BorderBrush="{x:Null}" FontSize="14" GridLinesVisibility="None" >
+                  Margin="583,532,0,0" Background="#FF191825" BorderBrush="{x:Null}" FontSize="14" GridLinesVisibility="None" >
             <DataGrid.CellStyle>
                 <Style/>
             </DataGrid.CellStyle>
@@ -168,6 +168,21 @@
             Foreground="White"
             FontSize="14"
             Margin="1072,412,206,249"/>
+        <Button Content="Рассчитать" 
+            HorizontalAlignment="Left" Height="57" 
+            Margin="888,465,0,0"
+            Click="Button_Calculate"
+            VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.508,1.843"/>
+        <Button Content="Обновить" 
+            HorizontalAlignment="Left" Height="57" 
+            Margin="1048,465,0,0"
+            Click="Button_Click"
+            VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.508,1.843"/>
+        <Button Content="Отправить" 
+            HorizontalAlignment="Left" Height="57" 
+            Margin="1209,465,0,0"
+            Click="Button_Click_1"
+            VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.508,1.843"/>
 
     </Grid>
 </Window>

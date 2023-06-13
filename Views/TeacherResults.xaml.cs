@@ -48,11 +48,12 @@ namespace VLab.Views
                 adapter.Fill(dataTable);
 
                 // Назначьте DataTable свойству ItemsSource вашего DataGrid
-                DataGrid.ItemsSource = dataTable.DefaultView;
+                DataGrid1.ItemsSource = dataTable.DefaultView;
 
                 // Закройте соединение
                 connection.Close();
             }
+            DataGrid1.MouseDoubleClick += DataGrid1_MouseDoubleClick;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -64,45 +65,69 @@ namespace VLab.Views
 
         private void Update_Click(object sender, RoutedEventArgs e)
         {
+            string query = "UPDATE Results SET YourField = @NewValue WHERE YourCondition = @Condition";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    //command.Parameters.AddWithValue("@NewValue", newValue);
+                    //command.Parameters.AddWithValue("@Condition", condition);
+
+                    // Откройте подключение к базе данных
+                    connection.Open();
+
+                    // Выполните команду обновления
+                    command.ExecuteNonQuery();
+
+                    // Закройте подключение к базе данных
+                    connection.Close();
+                }
+            }
 
         }
+
+
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
 
         }
-        private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+
+      
+
+        private void DataGrid1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            // Логика для обработки двойного нажатия на первый DataGrid
+            // Например, обновление данных или вывод другой таблицы во втором DataGrid
+            // ...
+
+            // Пример обновления данных во втором DataGrid
+            DataGrid2.ItemsSource = GetOtherTableData().DefaultView;
+            // Подставьте здесь свою логику получения данных для второго DataGrid
+        }
+
+        private DataTable GetOtherTableData()
+        {
+            DataTable dataTable = new DataTable();
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 int id = 1;
-                // Откройте соединение
                 connection.Open();
 
-                // Создайте команду SQL с параметром
-                string query = "SELECT * FROM Levels_Of_Noise WHERE Id = @id";
+                string query = "SELECT * FROM Levels_Of_Noise WHERE id_Levels_Of_Noise = @id";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    // Добавьте параметр в команду
                     command.Parameters.AddWithValue("@id", id);
 
-                    // Создайте адаптер данных для выполнения команды и получения результатов
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
-
-                    // Создайте таблицу данных для хранения результатов
-                    DataTable dataTable = new DataTable();
-                    
-                    // Заполните таблицу данными из адаптера
                     adapter.Fill(dataTable);
-
-                    // Верните таблицу данных
-                    
-                    
                 }
             }
 
+            return dataTable;
         }
-       
 
 
 

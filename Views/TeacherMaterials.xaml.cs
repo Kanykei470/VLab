@@ -227,26 +227,11 @@ namespace VLab.Views
                 string filePath = selectedRow.Row["Material"].ToString();
                 // Открыть файл в Microsoft Word
                 //LoadWordFile("D:\\VLab\\Resourses\\" + filePath);
-                LoadWordFile(filePath);
+               
             }
         }
 
-        private void LoadWordFile(string filePath)
-        {
-            try
-            {
-                using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(filePath, false))
-                {
-                    Body body = wordDoc.MainDocumentPart.Document.Body;
-                    string content = body.InnerText;
-                    TextBox.Text = content;
-                }
-            }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show("Ошибка загрузки файла: " + ex.Message);
-            }
-        }
+       
 
         private void Path_Click(object sender, RoutedEventArgs e)
         {
@@ -259,9 +244,6 @@ namespace VLab.Views
             }
         }
 
-        private void Clear_Click(object sender, RoutedEventArgs e)
-        {
-            TextBox.Clear();
-        }
+        
     }
 }

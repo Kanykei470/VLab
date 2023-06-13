@@ -120,19 +120,24 @@
             </Grid>
 
             <Image Margin="288,110,656,782" 
-                       Source="/Image250.jpg" Stretch="Fill"/>
+                       Source="/Image250.jpg" Stretch="Fill">
+                <Image.ToolTip>
+                    <ToolTip Content="Измеритель шума и вибрации типа ВШВ-003-М2, предназначаемый для измерения действующих значений уровней звукового давления" />
+                </Image.ToolTip>
+            </Image>
             <Button Content="Включить звук" 
                     HorizontalAlignment="Left" Height="57" 
                     Margin="724,148,0,0"
                     Click="Button_Click"
+                    Background="LawnGreen"
                     VerticalAlignment="Top" Width="100"/>
             <Slider 
                     Minimum="0" 
-                    Maximum="8000" 
+                    Maximum="100" 
                     Value="{Binding Volume}"
                     ValueChanged="Slider_ValueChanged"
                     x:Name="volumeSlider2"
-                    Margin="732,234,122,893"/>
+                    Margin="732,234,73,893"/>
             <MediaElement 
                     LoadedBehavior="Manual" 
                     UnloadedBehavior="Manual"
@@ -145,7 +150,7 @@
                     HorizontalAlignment="Left" Height="57" 
                     Margin="1193,148,0,0"
                     Click="Button_Click_1"
-                
+                    Background="Red"
                     VerticalAlignment="Top" Width="100"/>
             <TextBlock HorizontalAlignment="Left" Height="42" 
                     Margin="738,280,0,0" TextWrapping="Wrap" 
@@ -240,25 +245,37 @@
             <Button Content="Рассчитать" 
                     HorizontalAlignment="Left" Height="57" 
                     Margin="317,522,0,0"
+                    Background="LawnGreen"
                     Click="Button_Click_2"
                     VerticalAlignment="Top" Width="122"/>
             <Button Content="Отправить" 
+                    Background="BlueViolet"
                     HorizontalAlignment="Left" Height="57" 
                     Margin="155,522,0,0"
                     Click="Button_Click_3"
                     VerticalAlignment="Top" Width="122"/>
             <Button Content="Обновить" 
+                    Background="Yellow"
                     HorizontalAlignment="Left" Height="57" 
                     Margin="317,599,0,0"
                     Click="Button_Click_4"
                     VerticalAlignment="Top" Width="122"/>
             <Button Content="График" 
+                    Background="Aqua"
                     x:Name="Charts"
                     HorizontalAlignment="Left" Height="57" 
                     Margin="155,599,0,0"
                     Click="Button_Click_5"
                     IsEnabled="False"
                     VerticalAlignment="Top" Width="122"/>
+            <Label 
+                FontSize="17"
+                Foreground="White"
+                Content="Измеритель шума и вибрации &#x0a;типа ВШВ-003-М2" Margin="33,144,1083,912"/>
+            <Label 
+                FontSize="17"
+                Foreground="White"
+                Content="Допустимые уровни звукового  &#x0a;давления на рабочих местах " Margin="33,320,1050,760"/>
         </Grid>
 
         <Grid.RowDefinitions>

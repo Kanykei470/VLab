@@ -29,63 +29,76 @@
 
             </Button>
         </Grid>
+        <TextBlock 
+                    Text="Добавление материалов и ресурсов" 
+                    FontSize="27" 
+                    Foreground="White"
+                    TextAlignment="Center"
+                    FontWeight="Bold" 
+                    Margin="118,37,65,606"/>
         <Button
             x:Name="Upload_Btn"
             Click="Upload_Btn_Click"
             Content="Добавить" 
             Background="#9CFF2E"
             FontSize="20"
-            Margin="861,573,366,80" RenderTransformOrigin="5.42,0.737">
+            Margin="103,597,1124,56" RenderTransformOrigin="5.42,0.737">
         </Button>
         <DataGrid x:Name="DataGrid" 
                   AutoGenerateColumns="True" 
                   HorizontalAlignment="Left" 
                   VerticalAlignment="Top" 
-                  Height="420" Width="798"
+                  Height="444" Width="776"
                  
-                  Margin="58,111,0,0" Background="#FF191825" BorderBrush="{x:Null}" FontSize="20" GridLinesVisibility="None" >
+                  Margin="68,125,0,0" Background="#FF191825" BorderBrush="{x:Null}" FontSize="20" GridLinesVisibility="None" RenderTransformOrigin="0.5,0.5" >
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.107"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.748"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
             <DataGrid.CellStyle>
                 <Style/>
             </DataGrid.CellStyle>
         </DataGrid>
-
-        <TextBox x:Name="TextBox" Margin="899,111,68,181"  />
         <Button
             x:Name="Update_Btn"
             Click="Update_Btn_Click"
             Content="Обновить" 
             Background="Yellow"
             FontSize="20"
-            Margin="1029,573,198,80" RenderTransformOrigin="5.42,0.737"/>
+            Margin="415,597,812,56" RenderTransformOrigin="5.42,0.737"/>
         <Button
             x:Name="Delete_Btn"
             Click="Delete_Btn_Click"
             Content="Удалить" 
             Background="Red"
             FontSize="20"
-            Margin="1191,573,36,80" RenderTransformOrigin="5.42,0.737"/>
+            Margin="683,597,544,56" RenderTransformOrigin="5.42,0.737"/>
         <TextBlock HorizontalAlignment="Left" Height="42" 
-                   Margin="58,573,0,0" TextWrapping="Wrap" 
+                   Margin="914,121,0,0" TextWrapping="Wrap" 
                    Foreground="White"
                    FontSize="25"
-                   Text="Имя" VerticalAlignment="Top" Width="55"/>
+                   Text="Имя" VerticalAlignment="Top" Width="56"/>
         <TextBlock HorizontalAlignment="Left" Height="42" 
-            Margin="450,573,0,0" TextWrapping="Wrap" 
+            Margin="915,347,0,0" TextWrapping="Wrap" 
             Foreground="White"
             FontSize="25"
             Text="Путь" VerticalAlignment="Top" Width="55"/>
         <ComboBox 
             x:Name="comboBox"
-            HorizontalAlignment="Left" Height="42" Margin="58,639,0,0" 
-            VerticalAlignment="Top" Width="331"/>
+            HorizontalAlignment="Left" Height="42" Margin="915,260,0,0" 
+            VerticalAlignment="Top" Width="367"/>
         <TextBox HorizontalAlignment="Left" 
                  x:Name="NameOfFile"
-                 Margin="149,576,0,0" TextWrapping="Wrap" 
+                 Margin="1006,124,0,0" TextWrapping="Wrap" 
                  FontSize="25"
-                 Text="" VerticalAlignment="Top" Width="240"/>
+                 Text="" VerticalAlignment="Top" Width="276"/>
         <TextBox HorizontalAlignment="Left" 
                  x:Name="Path"
-            Margin="527,576,0,0" TextWrapping="Wrap" 
+            Margin="992,350,0,0" TextWrapping="Wrap" 
             FontSize="25"
             Text="" VerticalAlignment="Top" Width="290"/>
         <Button
@@ -94,14 +107,12 @@
             Content="Найти Файл" 
             Background="Aqua"
             FontSize="20"
-            Margin="861,643,365,10" RenderTransformOrigin="5.42,0.737"/>
-        <Button
-            x:Name="Clear"
-            Click="Clear_Click"
-            Content="Очистить" 
-            Background="Orange"
-            FontSize="20"
-            Margin="1029,643,197,10" RenderTransformOrigin="5.42,0.737"/>
+            Margin="914,412,312,241" RenderTransformOrigin="5.42,0.737"/>
+        <TextBlock HorizontalAlignment="Left" Height="42" 
+            Margin="915,201,0,0" TextWrapping="Wrap" 
+            Foreground="White"
+            FontSize="25"
+            Text="Лабораторная работа" VerticalAlignment="Top" Width="345" RenderTransformOrigin="0.554,2.168"/>
 
 
     </Grid>

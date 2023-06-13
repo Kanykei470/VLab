@@ -131,19 +131,6 @@
             Foreground="White"
             FontSize="14"
             Margin="1077,186,206,475"/>
-        <Label Content="Объем воздуха протянутого через фильтр:" 
-            Foreground="White"
-            FontSize="14"
-            Margin="789,242,289,419"/>
-        <Label Content="" 
-            x:Name="Volume_Of_Air_Reduced_To_Standard"
-            Foreground="White"
-            FontSize="14"
-            Margin="1078,242,227,419" RenderTransformOrigin="0.5,0.5"/>
-        <Label Content="м3" 
-            Foreground="White"
-            FontSize="14"
-            Margin="1141,242,142,419"/>
         <Image Margin="619,320,406,253" Source="/Image3.png" Stretch="Fill">
             <Image.ToolTip>
                 <ToolTip Content="Формула вычисления объема воздуха" />

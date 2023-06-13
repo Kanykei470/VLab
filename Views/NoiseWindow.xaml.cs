@@ -210,7 +210,7 @@ namespace VLab.Views
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             int volume = (int)e.NewValue;
-            mediaElement2.Volume = volume / 1000;
+            mediaElement2.Volume = volume;
             //MessageBox.Show(mediaElement2.Volume.ToString());
         }
 
