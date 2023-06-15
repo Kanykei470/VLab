@@ -28,7 +28,6 @@ namespace VLab.Views
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
-            //Student student1= student;
             this.student = student;
 
         }
@@ -42,10 +41,6 @@ namespace VLab.Views
         private void user_Click(object sender, RoutedEventArgs e)
         {
             //user.Equals(name);
-
-          
-
-
         }
 
         private void info_Click(object sender, RoutedEventArgs e)
@@ -79,14 +74,14 @@ namespace VLab.Views
 
         private void labs_Click(object sender, RoutedEventArgs e)
         {
-            AllLabs labs = new AllLabs();
+            AllLabs labs = new AllLabs(student);
             labs.Show();
             Close();
         }
 
         private void Border_noise(object sender, MouseButtonEventArgs e)
         {
-            this.student = student;
+            //this.student = student;
             NoiseWindow noise = new NoiseWindow(student);
             noise.Show();
             Close();
@@ -94,7 +89,7 @@ namespace VLab.Views
 
         private void Border_lights(object sender, MouseButtonEventArgs e)
         {
-            this.student = student;
+            //this.student = student;
             IlluminationWindow lights = new IlluminationWindow(student);
             lights.Show();
             Close();

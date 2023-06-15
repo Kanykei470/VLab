@@ -12,8 +12,7 @@
         Background="#191825">
     <Grid>
         
-        <Border Background="#191825"
-            >
+        <Border Background="#191825">
            
         </Border>
         <Grid Height="50"

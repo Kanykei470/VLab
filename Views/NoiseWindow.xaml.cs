@@ -69,7 +69,7 @@ namespace VLab.Views
             this.student = student;
 
 
-            LoadWordFile("D:\\VLab\\Resourses\\Шум.docx");
+            LoadWordFile("D:\\VLab\\Resourses\\ИССЛЕДОВАНИЕ ПРОИЗВОДСТВЕННОГО ШУМА.docx");
         }
 
 
@@ -101,9 +101,9 @@ namespace VLab.Views
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            //MainMenu menu = new MainMenu("123");
-            //menu.Show();
-            //this.Close();
+            MainMenu menu = new MainMenu(student);
+            menu.Show();
+            this.Close();
         }
 
 

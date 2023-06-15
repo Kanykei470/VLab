@@ -25,7 +25,7 @@ namespace VLab.Views
                 // Откройте соединение
                 connection.Open();
 
-                // Выполните SQL-запрос
+                // Выполните SQL-запросы
                 string sqlQuery = "SELECT * FROM ViewOfMaterials";
                 SqlCommand command = new SqlCommand(sqlQuery, connection);
 

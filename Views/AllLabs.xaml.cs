@@ -20,10 +20,12 @@ namespace VLab.Views
     /// </summary>
     public partial class AllLabs : Window
     {
-        public AllLabs()
+        Student student;
+        public AllLabs(Student student)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
+            this.student = student;
         }
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
@@ -33,9 +35,9 @@ namespace VLab.Views
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            //MainMenu menu = new MainMenu("123");
-            //menu.Show();
-            //this.Close();
+            MainMenu menu = new MainMenu(student);
+            menu.Show();
+            this.Close();
         }
 
         private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

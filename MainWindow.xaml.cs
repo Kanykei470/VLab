@@ -20,9 +20,7 @@ using VLab.Views;
 
 namespace VLab
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         private string connectionString = "Server=DROPSOFJUPITER;Database=VirtualLab;Trusted_Connection=True;TrustServerCertificate=True;";
@@ -130,7 +128,6 @@ namespace VLab
                     else
                     {
                         // Обработка ошибки, если идентификатор (id) не был получен
-                        // Можно выбрать подходящий вариант, например, выбросить исключение или вернуть значение по умолчанию
                         throw new Exception("Не удалось получить идентификатор (id) для выбранной группы.");
                     }
                 }
@@ -203,6 +200,15 @@ namespace VLab
         private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             TeacherWindow teacher = new TeacherWindow();
+            teacher.Show();
+            Close();
+        }
+
+      
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow teacher = new MainWindow();
             teacher.Show();
             Close();
         }
